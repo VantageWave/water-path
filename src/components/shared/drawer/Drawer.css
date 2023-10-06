@@ -1,0 +1,93 @@
+.drawer-container {
+  --drawer-width: 420px;
+  --transition-speed: 0.3s;
+}
+
+.drawer {
+  background-color: hsl(var(--nextui-foreground-50));
+  width: var(--drawer-width);
+  /* width: 30%; */
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform var(--transition-speed) ease;
+  z-index: 1000;
+}
+
+.drawer.left {
+  top: 0;
+  left: 0;
+  transform: translateX(-105%);
+}
+
+.drawer.right {
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+}
+
+.drawer-container.open .left,
+.drawer-container.open .right {
+  transform: translateX(0);
+}
+
+.backdrop {
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition:
+    opacity var(--transition-speed) ease,
+    visibility var(--transition-speed) ease;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.drawer-container.open .backdrop {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 999;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: hsl(var(--nextui-primary));
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform var(--transition-speed) ease;
+}
+
+.toggle.left {
+  top: 20px;
+  left: 20px;
+  transform: rotate(180deg);
+}
+
+.toggle.right {
+  top: 20px;
+  right: 20px;
+}
+
+.drawer-container.open .toggle.left {
+  transform: translateX(var(--drawer-width)) rotate(180deg);
+}
+
+.drawer-container.open .toggle.right {
+  transform: translateX(calc(var(--drawer-width) * -1)) rotate(180deg);
+}
