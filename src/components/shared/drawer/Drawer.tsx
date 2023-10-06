@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { cn } from '@nextui-org/react';
 import { createPortal } from 'react-dom';
 import FocusTrap from 'focus-trap-react';
-import { BsArrowLeft } from 'react-icons/bs';
+import { RxDoubleArrowLeft } from 'react-icons/rx';
 import { DrawerProps } from './Drawer.types';
 import './Drawer.css';
 
@@ -61,7 +61,7 @@ const Drawer = ({
               className={cn('toggle', position)}
               onClick={() => setOpened((state) => !state)}
             >
-              <BsArrowLeft className="icon" />
+              <RxDoubleArrowLeft className="icon" />
             </div>
           )}
           <div
