@@ -60,12 +60,7 @@ export const initState = {
 };
 
 const initContext = {
-  state: {
-    case: 1,
-    lang: 'en',
-    startDate: '',
-    endDate: '',
-  },
+  state: initState,
   dispatch: () => {},
 };
 
