@@ -35,12 +35,12 @@ const DropdownSelector = ({
       <DropdownTrigger className="px-2">
         {selectedStartDate === '' ? (
           <Button variant="bordered" className="capitalize" isDisabled>
-            {selectedValue}
+            {text}
             <CalendarTodayIcon fontSize="small" />
           </Button>
         ) : (
           <Button variant="bordered" className="capitalize px-5">
-            {selectedValue}
+            {text}
             <CalendarTodayIcon fontSize="small" />
           </Button>
         )}

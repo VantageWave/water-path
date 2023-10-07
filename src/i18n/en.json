@@ -1,5 +1,5 @@
 {
-  "src.components.CaseSelector.label": "label",
+  "src.components.CaseSelector.label": "Case",
   "src.components.CaseSelector.lake1": "Wilczyńskie Lake",
   "src.components.CaseSelector.lake2": "Aralskie Lake",
   "src.components.CaseSelector.placeholder": "placeholder",
@@ -10,5 +10,10 @@
   "src.components.date-selector.endDate": "End date",
   "src.components.date-selector.startDate": "Start date",
   "src.components.drawer-with-details.details-tabs.information-tab.location": "Location",
-  "src.components.drawer-with-details.details-tabs.information-tab.name": "Name"
+  "src.components.drawer-with-details.details-tabs.information-tab.name": "Name",
+  "src.components.drawer-with-details.information": "Information",
+  "src.components.drawer-with-details.news": "News",
+  "src.components.drawer-with-details.source": "Source",
+  "src.components.drawer-with-details.data-tab.year": "Launch year",
+  "src.components.drawer-with-details.data-tab.name": "Name"
 }
