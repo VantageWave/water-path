@@ -30,9 +30,6 @@ const CaseSelector = ({ className }: CaseSelectorProps) => {
       <SelectItem key={2} value={2}>
         {formatMessage(messages.lake2)}
       </SelectItem>
-      <SelectItem key={3} value={3}>
-        {formatMessage(messages.san)}
-      </SelectItem>
     </Select>
   );
 };
@@ -46,11 +43,7 @@ const messages = defineMessages({
   },
   lake2: {
     id: 'src.components.CaseSelector.lake2',
-    defaultMessage: 'Aralskie Lake',
-  },
-  san: {
-    id: 'src.components.CaseSelector.san',
-    defaultMessage: 'San',
+    defaultMessage: 'Chad Lake',
   },
   label: {
     id: 'src.components.CaseSelector.label',
