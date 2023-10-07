@@ -2,7 +2,8 @@ export interface DateSelectorProps {
   className: string;
 }
 
-export interface DateRange {
-  startDate: Date;
-  endDates: Date[];
+export interface dateSelector {
+  text: string;
+  selectedStartDate: string;
+  onStartDateChange: (startDate: string) => void;
 }
