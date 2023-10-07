@@ -44,7 +44,6 @@ const NewsTab = ({ level }: NewsTabProps) => {
 
     setTimeout(() => {
       const analysis = caseInformation[`case-${dataCase ?? 1}`].analysis[level];
-
       setAnalysis(analysis);
       setAnalysisLoaded(true);
     }, 1000);
@@ -95,7 +94,7 @@ const NewsTab = ({ level }: NewsTabProps) => {
             ))}
       </div>
 
-      <div className='mt-[24px]'>
+      <div className="mt-[24px]">
         {analysisLoaded ? (
           <ScrollShadow className="w-full h-[42%] pb-[10px] text-[14px] indent-5 whitespace-break-spaces">
             {analysis}

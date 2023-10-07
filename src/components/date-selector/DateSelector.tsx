@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Card,
   Dropdown,
@@ -17,6 +17,7 @@ import { useContext, useMemo, useState } from 'react';
 import allData from '../../assets/data';
 
 import { ActionType, DataContext } from '../../context';
+import { defineMessages, useIntl } from 'react-intl';
 
 const DropdownSelector = ({
   text,
@@ -26,7 +27,7 @@ const DropdownSelector = ({
   const [selectedKey, setselectedKey] = useState<Set<string>>(new Set([text]));
   const data = allData[1];
 
-  const { dispatch, state } = useContext(DataContext);
+  const { dispatch } = useContext(DataContext);
 
   const selectedValue = useMemo(() => Array.from(selectedKey), [selectedKey]);
   return (
@@ -85,12 +86,13 @@ const DropdownSelector = ({
 
 const DateSelector = ({ className }: DateSelectorProps) => {
   const [selectedStartDate, setSelectedStartDate] = useState<string>('');
+  const { formatMessage } = useIntl();
   return (
     <Card className={`${className} dark:bg-foreground-100/80 px-0 py-1`}>
       <CardBody className="p-0">
         <div className="items-center justify-center gap-2">
           <DropdownSelector
-            text="Start date"
+            text={formatMessage(messages.startDate)}
             selectedStartDate={'any'}
             onStartDateChange={(startDate) => setSelectedStartDate(startDate)}
           />
@@ -99,7 +101,7 @@ const DateSelector = ({ className }: DateSelectorProps) => {
             className="basis-1/3"
           />
           <DropdownSelector
-            text="End date"
+            text={formatMessage(messages.endDate)}
             selectedStartDate={selectedStartDate}
             onStartDateChange={() => null}
           />
@@ -108,5 +110,16 @@ const DateSelector = ({ className }: DateSelectorProps) => {
     </Card>
   );
 };
+
+const messages = defineMessages({
+  startDate: {
+    id: 'src.components.date-selector.startDate',
+    defaultMessage: 'Start date',
+  },
+  endDate: {
+    id: 'src.components.date-selector.endDate',
+    defaultMessage: 'End date',
+  },
+});
 
 export default DateSelector;

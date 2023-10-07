@@ -6,13 +6,13 @@ import { DataContext, ActionType } from '../../context';
 
 const CaseSelector = ({ className }: CaseSelectorProps) => {
   const { formatMessage } = useIntl();
-  const { dispatch, state } = useContext(DataContext);  
+  const { dispatch, state } = useContext(DataContext);
 
   return (
     <Select
       color="primary"
-      label="Data case"
-      placeholder="Select a case"
+      label={formatMessage(messages.label)}
+      placeholder={formatMessage(messages.placeholder)}
       variant="faded"
       onChange={(data) => {
         dispatch({
@@ -51,5 +51,13 @@ const messages = defineMessages({
   san: {
     id: 'src.components.CaseSelector.san',
     defaultMessage: 'San',
+  },
+  label: {
+    id: 'src.components.CaseSelector.label',
+    defaultMessage: 'label',
+  },
+  placeholder: {
+    id: 'src.components.CaseSelector.placeholder',
+    defaultMessage: 'placeholder',
   },
 });

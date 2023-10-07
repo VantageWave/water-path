@@ -7,6 +7,7 @@ import {
   InformationPlace,
   InformationTabProps,
 } from './InformationTab.types';
+import { defineMessages, useIntl } from 'react-intl';
 
 const InformationTab = ({ level }: InformationTabProps) => {
   const {
@@ -54,6 +55,8 @@ const InformationTab = ({ level }: InformationTabProps) => {
 
   useEffect(() => loadAnalysis(), [level, dataCase]);
 
+  const { formatMessage } = useIntl();
+
   return (
     <>
       <div className="mb-[24px]">
@@ -66,14 +69,14 @@ const InformationTab = ({ level }: InformationTabProps) => {
         <div className="mt-3">
           <Skeleton isLoaded={placeLoaded} className="w-[100%] rounded-lg">
             <div className="flex justify-between px-1.5">
-              <strong>Name: </strong>
+              <strong>{formatMessage(messages.name)}: </strong>
               <span>{place?.name}</span>
             </div>
           </Skeleton>
 
           <Skeleton isLoaded={placeLoaded} className="w-[100%] mt-2 rounded-lg">
             <div className="flex justify-between px-1.5">
-              <strong>Location: </strong>
+              <strong>{formatMessage(messages.location)}: </strong>
               <span>{place?.location}</span>
             </div>
           </Skeleton>
@@ -97,5 +100,16 @@ const InformationTab = ({ level }: InformationTabProps) => {
     </>
   );
 };
+
+const messages = defineMessages({
+  name: {
+    id: 'src.components.drawer-with-details.details-tabs.information-tab.name',
+    defaultMessage: 'Name',
+  },
+  location: {
+    id: 'src.components.drawer-with-details.details-tabs.information-tab.location',
+    defaultMessage: 'Location',
+  },
+});
 
 export default InformationTab;
