@@ -16,4 +16,5 @@
   "src.components.drawer-with-details.source": "Source",
   "src.components.drawer-with-details.data-tab.year": "Launch year",
   "src.components.drawer-with-details.data-tab.name": "Name"
+  "src.components.drawer-with-details.details-tabs.information-tab.name": "Name"
 }
