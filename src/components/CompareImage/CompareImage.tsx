@@ -24,6 +24,28 @@ interface IProps {
   sliderLineWidth?: number;
   sliderPositionPercentage?: number;
   vertical?: boolean;
+  aspectRatio?: 'taller' | 'wider';
+  handle?: React.ReactNode;
+  handleSize?: number;
+  hover?: boolean;
+  leftImage: string;
+  leftImageAlt?: string;
+  leftImageCss?: object;
+  leftImageLabel?: string;
+  leftLabelClass?: string;
+  leftLabelContainerClass?: string;
+  onSliderPositionChange?: (position: number) => void;
+  rightImage: string;
+  rightImageAlt?: string;
+  rightImageCss?: object;
+  rightImageLabel?: string;
+  rightLabelClass?: string;
+  rightLabelContainerClass?: string;
+  skeleton?: React.ReactNode;
+  sliderLineColor?: string;
+  sliderLineWidth?: number;
+  sliderPositionPercentage?: number;
+  vertical?: boolean;
 }
 
 export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
@@ -51,9 +73,43 @@ export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
     sliderPositionPercentage = 0.5,
     vertical = false,
   } = props;
+  const {
+    aspectRatio = 'taller',
+    handle = null,
+    handleSize = 40,
+    hover = false,
+    leftImage,
+    leftImageAlt = '',
+    leftImageCss = {},
+    leftImageLabel = null,
+    leftLabelClass = '',
+    leftLabelContainerClass = '',
+    onSliderPositionChange = () => {},
+    rightImage,
+    rightImageAlt = '',
+    rightImageCss = {},
+    rightImageLabel = null,
+    rightLabelClass = '',
+    rightLabelContainerClass = '',
+    skeleton = null,
+    sliderLineColor = '#ffffff',
+    sliderLineWidth = 2,
+    sliderPositionPercentage = 0.5,
+    vertical = false,
+  } = props;
 
   const horizontal = !vertical;
+  const horizontal = !vertical;
 
+  // 0 to 1
+  const [sliderPosition, setSliderPosition] = useState<number>(
+    sliderPositionPercentage,
+  );
+  const [containerWidth, setContainerWidth] = useState<number>(0);
+  const [containerHeight, setContainerHeight] = useState<number>(0);
+  const [leftImgLoaded, setLeftImgLoaded] = useState<boolean>(false);
+  const [rightImgLoaded, setRightImgLoaded] = useState<boolean>(false);
+  const [isSliding, setIsSliding] = useState<boolean>(false);
   // 0 to 1
   const [sliderPosition, setSliderPosition] = useState<number>(
     sliderPositionPercentage,
@@ -67,7 +123,18 @@ export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
   const containerRef = useRef(null);
   const rightImageRef = useRef(null);
   const leftImageRef = useRef(null);
+  const containerRef = useRef(null);
+  const rightImageRef = useRef(null);
+  const leftImageRef = useRef(null);
 
+  // make the component responsive
+  useEffect(() => {
+    const containerElement = containerRef.current;
+    const resizeObserver = new ResizeObserver(([entry, ..._]) => {
+      const currentContainerWidth = entry.target.getBoundingClientRect().width;
+      setContainerWidth(currentContainerWidth);
+    });
+    resizeObserver.observe(containerElement);
   // make the component responsive
   useEffect(() => {
     const containerElement = containerRef.current;
@@ -79,7 +146,14 @@ export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
 
     return () => resizeObserver.disconnect();
   }, []);
+    return () => resizeObserver.disconnect();
+  }, []);
 
+  useEffect(() => {
+    // consider the case where loading image is completed immediately
+    // due to the cache etc.
+    const alreadyDone = leftImageRef.current.complete;
+    alreadyDone && setLeftImgLoaded(true);
   useEffect(() => {
     // consider the case where loading image is completed immediately
     // due to the cache etc.
@@ -91,7 +165,17 @@ export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
       setLeftImgLoaded(false);
     };
   }, [leftImage]);
+    return () => {
+      // when the left image source is changed
+      setLeftImgLoaded(false);
+    };
+  }, [leftImage]);
 
+  useEffect(() => {
+    // consider the case where loading image is completed immediately
+    // due to the cache etc.
+    const alreadyDone = rightImageRef.current.complete;
+    alreadyDone && setRightImgLoaded(true);
   useEffect(() => {
     // consider the case where loading image is completed immediately
     // due to the cache etc.
@@ -103,13 +187,27 @@ export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
       setRightImgLoaded(false);
     };
   }, [rightImage]);
+    return () => {
+      // when the right image source is changed
+      setRightImgLoaded(false);
+    };
+  }, [rightImage]);
 
+  const allImagesLoaded = rightImgLoaded && leftImgLoaded;
   const allImagesLoaded = rightImgLoaded && leftImgLoaded;
 
   useEffect(() => {
     const handleSliding = (event) => {
       const e = event || window.event;
+  useEffect(() => {
+    const handleSliding = (event) => {
+      const e = event || window.event;
 
+      // Calc cursor position from the:
+      // - left edge of the viewport (for horizontal)
+      // - top edge of the viewport (for vertical)
+      const cursorXfromViewport = e.touches ? e.touches[0].pageX : e.pageX;
+      const cursorYfromViewport = e.touches ? e.touches[0].pageY : e.pageY;
       // Calc cursor position from the:
       // - left edge of the viewport (for horizontal)
       // - top edge of the viewport (for vertical)

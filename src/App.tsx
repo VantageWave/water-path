@@ -21,7 +21,7 @@ function App() {
 
   return (
     <DataContext.Provider value={providerValue}>
-      <IntlProvider messages={messages['en']} locale="en" defaultLocale="en">
+      <IntlProvider messages={messages.en} locale="en" defaultLocale="en">
         <CaseSelector className="max-w-xs absolute left-3 top-3 z-10" />
 
         <ImageComparator />
