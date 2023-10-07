@@ -14,10 +14,10 @@ const NewsTab = ({ level }: NewsTabProps) => {
   } = useContext(DataContext);
 
   const [newsLoaded, setNewsLoaded] = useState(false);
-  const [analysisLoaded, setAnalysisLoaded] = useState(false);
+  const [summaryLoaded, setSummaryLoaded] = useState(false);
 
   const [news, setNews] = useState<NewsItem[]>([]);
-  const [analysis, setAnalysis] = useState<string>('');
+  const [summary, setSummary] = useState<string>('');
 
   const typeToNewsCaseStructured = (json: unknown): NewsCaseStructured => {
     return json as NewsCaseStructured;
@@ -39,23 +39,23 @@ const NewsTab = ({ level }: NewsTabProps) => {
     }, 1000);
   };
 
-  const loadAnalysis = () => {
-    setAnalysisLoaded(false);
+  const loadSummary = () => {
+    setSummaryLoaded(false);
 
     setTimeout(() => {
-      const analysis = caseInformation[`case-${dataCase ?? 1}`].analysis[level];
+      const summary = caseInformation[`case-${dataCase ?? 1}`].summary[level];
 
-      setAnalysis(analysis);
-      setAnalysisLoaded(true);
+      setSummary(summary);
+      setSummaryLoaded(true);
     }, 1000);
   };
 
   useEffect(() => loadNews(), [dataCase]);
 
-  useEffect(() => loadAnalysis(), [dataCase, level]);
+  useEffect(() => loadSummary(), [dataCase, level]);
 
   return (
-    <>
+    <ScrollShadow className="max-h-[calc(100%_-_60px)]">
       <div className="flex flex-col gap-3">
         {newsLoaded
           ? news.map((newsItem) => (
@@ -95,14 +95,14 @@ const NewsTab = ({ level }: NewsTabProps) => {
             ))}
       </div>
 
-      <div className='mt-[24px]'>
-        {analysisLoaded ? (
-          <ScrollShadow className="w-full h-[42%] pb-[10px] text-[14px] indent-5 whitespace-break-spaces">
-            {analysis}
-          </ScrollShadow>
+      <div className="mt-[24px] h-[100%]">
+        {summaryLoaded ? (
+          <span className="w-full pb-[10px] text-[14px] indent-5 whitespace-break-spaces">
+            {summary}
+          </span>
         ) : (
           <div className="flex flex-col	gap-[12px]">
-            {Array.from(Array(6)).map((_, i) => (
+            {Array.from(Array(12)).map((_, i) => (
               <Skeleton
                 key={i}
                 className="w-full h-4 rounded-lg bg-secondary"
@@ -111,7 +111,7 @@ const NewsTab = ({ level }: NewsTabProps) => {
           </div>
         )}
       </div>
-    </>
+    </ScrollShadow>
   );
 };
 

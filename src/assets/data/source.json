@@ -1,0 +1,14 @@
+{
+  "case-1": {
+    "source": {
+      "name": "Sentinel",
+      "launchYear": "2017",
+      "imageUrl": "https://static.wirtualnemedia.pl/media/top/airbus-sentinel2b.jpg"
+    },
+    "summary": {
+      "k-5": "",
+      "6-8": "",
+      "9-12": ""
+    }
+  }
+}
