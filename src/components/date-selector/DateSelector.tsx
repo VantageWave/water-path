@@ -11,9 +11,11 @@ import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArro
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 
 import { DateSelectorProps, dateSelector } from './DateSelector.types';
-import { useMemo, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
 
 import allData from '../../assets/data';
+
+import { ActionType, DataContext } from '../../context';
 
 const DropdownSelector = ({
   text,
@@ -22,6 +24,8 @@ const DropdownSelector = ({
 }: dateSelector) => {
   const [selectedKey, setselectedKey] = useState<Set<string>>(new Set([text]));
   const data = allData[1];
+
+  const { dispatch, state } = useContext(DataContext);
 
   const selectedValue = useMemo(() => Array.from(selectedKey), [selectedKey]);
   return (
@@ -49,6 +53,19 @@ const DropdownSelector = ({
           if (onStartDateChange && newselectedKey.size === 1) {
             const startDate = Array.from(newselectedKey)[0];
             onStartDateChange(startDate);
+            if (selectedStartDate === 'any') {
+              dispatch({
+                type: ActionType.UPDATE_START_DATE,
+                payload: startDate,
+              });
+              console.log(startDate);
+            } else {
+              console.log(startDate);
+              dispatch({
+                type: ActionType.UPDATE_END_DATE,
+                payload: startDate,
+              });
+            }
           }
         }}
         className="text-center"
