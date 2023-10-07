@@ -1,17 +1,31 @@
 import { Tab, Tabs } from '@nextui-org/react';
-import { SchoolGradeSwitcherProps } from './SchoolGradeSwitcher.types';
+import {
+  EducationLevel,
+  SchoolGradeSwitcherProps,
+} from './SchoolGradeSwitcher.types';
+import { Key } from 'react';
 
-const SchoolGradeSwitcher = ({ className }: SchoolGradeSwitcherProps) => {
+const SchoolGradeSwitcher = ({
+  level,
+  setLevel,
+  className,
+}: SchoolGradeSwitcherProps) => {
+  const levelChanged = (e: Key): void => {
+    setLevel(e as EducationLevel);
+  };
+
   return (
     <Tabs
       color="primary"
       variant="bordered"
       radius="full"
       className={className}
+      selectedKey={level}
+      onSelectionChange={levelChanged}
     >
-      <Tab key="k6" title="K-6" />
-      <Tab key="k9" title="K-9" />
-      <Tab key="k12" title="K-12" />
+      <Tab key={EducationLevel.ELEMENTARY} title="K-5" />
+      <Tab key={EducationLevel.SECONDARY} title="6-8" />
+      <Tab key={EducationLevel.PRE_COLLEGE} title="9-12" />
     </Tabs>
   );
 };

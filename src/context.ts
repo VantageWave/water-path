@@ -37,6 +37,11 @@ export const reducer = (state: RootState, action: Action) => {
 }
 
 export const initState = {
+    case: 1,
+    lang: "en",
+}
+
+const initContext = {
     state: {
         case: 1,
         lang: "en",
@@ -44,4 +49,4 @@ export const initState = {
     dispatch: () => { }
 }
 
-export const DataContext = createContext<ContextType>(initState);
+export const DataContext = createContext<ContextType>(initContext);
