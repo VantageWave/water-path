@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Card,
   Dropdown,
@@ -12,7 +12,7 @@ import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArro
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 
 import { DateSelectorProps, dateSelector } from './DateSelector.types';
-import { useContext, useMemo, useState } from 'react';
+import { useContext, useState } from 'react';
 
 import allData from '../../assets/data';
 
@@ -24,23 +24,23 @@ const DropdownSelector = ({
   selectedStartDate,
   onStartDateChange,
 }: dateSelector) => {
-  const [selectedKey, setselectedKey] = useState<Set<string>>(new Set([text]));
-  const data = allData[1];
+  const [selectedKey, setSelectedKey] = useState<string | null>(null);
+  const { state } = useContext(DataContext);
+  const data = allData[state.case];
 
   const { dispatch } = useContext(DataContext);
 
-  const selectedValue = useMemo(() => Array.from(selectedKey), [selectedKey]);
   return (
     <Dropdown>
       <DropdownTrigger className="px-2">
         {selectedStartDate === '' ? (
           <Button variant="bordered" className="capitalize" isDisabled>
-            {text}
+            {selectedKey || text}
             <CalendarTodayIcon fontSize="small" />
           </Button>
         ) : (
           <Button variant="bordered" className="capitalize px-5">
-            {text}
+            {selectedKey || text}
             <CalendarTodayIcon fontSize="small" />
           </Button>
         )}
@@ -49,9 +49,9 @@ const DropdownSelector = ({
         variant="flat"
         disallowEmptySelection
         selectionMode="single"
-        selectedKey={selectedKey}
-        onSelectionChange={(newselectedKey: Set<string>) => {
-          setselectedKey(newselectedKey);
+        selectedKey={selectedKey || text}
+        onSelectionChange={(newselectedKey: string) => {
+          setSelectedKey(newselectedKey);
           if (onStartDateChange && newselectedKey.size === 1) {
             const startDate = Array.from(newselectedKey)[0];
             onStartDateChange(startDate);
@@ -72,13 +72,13 @@ const DropdownSelector = ({
       >
         {selectedStartDate === 'any'
           ? data
-            .slice(0, -1)
-            .map((ob) => <DropdownItem key={ob.date}>{ob.date}</DropdownItem>)
+              .slice(0, -1)
+              .map((ob) => <DropdownItem key={ob.date}>{ob.date}</DropdownItem>)
           : data
-            .filter((item) => item.date > selectedStartDate)
-            .map((ob) => (
-              <DropdownItem key={ob.date}>{ob.date}</DropdownItem>
-            ))}
+              .filter((item) => item.date > selectedStartDate)
+              .map((ob) => (
+                <DropdownItem key={ob.date}>{ob.date}</DropdownItem>
+              ))}
       </DropdownMenu>
     </Dropdown>
   );
@@ -91,7 +91,7 @@ const DateSelector = ({ className }: DateSelectorProps) => {
   return (
     <Card className={`${className} dark:bg-foreground-100/80 px-0 py-1`}>
       <CardBody className="p-0">
-      <div className="items-center justify-center gap-2">
+        <div className="items-center justify-center gap-2">
           <DropdownSelector
             text={formatMessage(messages.startDate)}
             selectedStartDate={'any'}
