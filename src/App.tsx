@@ -9,6 +9,7 @@ import Logo from './components/logo/Logo';
 import { DataContext, reducer, initState } from './context';
 
 import messages from './i18n';
+import { LanguagePicker } from './components/LanguagePicker/languagePicker';
 
 function App() {
   //@ts-ignore
@@ -21,13 +22,19 @@ function App() {
 
   return (
     <DataContext.Provider value={providerValue}>
-      <IntlProvider messages={messages.en} locale="en" defaultLocale="en">
+      <IntlProvider
+        messages={messages[state.lang]}
+        locale={state.lang}
+        defaultLocale="en"
+      >
         <CaseSelector className="max-w-xs absolute left-3 top-3 z-10" />
 
         <ImageComparator />
 
         <Logo className="absolute left-3 bottom-3" />
         <DateSelector className="absolute bottom-3 left-1/2 transform -translate-x-1/2" />
+
+        <LanguagePicker />
 
         <DrawerWithDetails />
       </IntlProvider>
