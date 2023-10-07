@@ -7,15 +7,19 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "extract-messages": "extract-messages -l=en,pl -o ./src/i18n -d en --flat true ./src/**/*.{js,jsx,ts,tsx}"
   },
   "dependencies": {
     "@nextui-org/react": "^2.1.13",
+    "extract-react-intl-messages": "^4.1.1",
     "focus-trap-react": "^10.2.2",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
+    "react-compare-image": "^3.4.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "react-intl": "^6.4.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
