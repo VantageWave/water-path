@@ -65,14 +65,14 @@ const InformationTab = ({ level }: InformationTabProps) => {
         </Skeleton>
         <div className="mt-3">
           <Skeleton isLoaded={placeLoaded} className="w-[100%] rounded-lg">
-            <div className="flex justify-between px-1">
+            <div className="flex justify-between px-1.5">
               <strong>Name: </strong>
               <span>{place?.name}</span>
             </div>
           </Skeleton>
 
           <Skeleton isLoaded={placeLoaded} className="w-[100%] mt-2 rounded-lg">
-            <div className="flex justify-between px-1">
+            <div className="flex justify-between px-1.5">
               <strong>Location: </strong>
               <span>{place?.location}</span>
             </div>
@@ -81,7 +81,7 @@ const InformationTab = ({ level }: InformationTabProps) => {
       </div>
 
       {analysisLoaded ? (
-        <ScrollShadow className="w-full h-[42%] pb-[10px] whitespace-break-spaces">
+        <ScrollShadow className="w-full h-[42%] pb-[10px] text-[14px] indent-5 whitespace-break-spaces">
           {analysis}
         </ScrollShadow>
       ) : (
