@@ -13,7 +13,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { DateSelectorProps, dateSelector } from './DateSelector.types';
 import { useMemo, useState } from 'react';
 
-import data from '../../assets/data/data.json';
+import allData from '../../assets/data';
 
 const DropdownSelector = ({
   text,
@@ -21,6 +21,7 @@ const DropdownSelector = ({
   onStartDateChange,
 }: dateSelector) => {
   const [selectedKey, setselectedKey] = useState<Set<string>>(new Set([text]));
+  const data = allData[1];
 
   const selectedValue = useMemo(() => Array.from(selectedKey), [selectedKey]);
   return (
@@ -69,7 +70,7 @@ const DropdownSelector = ({
 const DateSelector = ({ className }: DateSelectorProps) => {
   const [selectedStartDate, setSelectedStartDate] = useState<string>('');
   return (
-    <Card className={`${className} dark:bg-foreground-100/80`}>
+    <Card className={`${className} dark:bg-foreground-100/80 px-3`}>
       <CardBody className="p-1">
         <div className="flex items-center justify-center gap-2">
           <DropdownSelector
