@@ -1,14 +1,25 @@
 import { useReducer } from 'react';
 import { IntlProvider } from 'react-intl';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import './App.css';
-import ImageComparator from './components/ImageComparator/ImageComparator';
-import CaseSelector from './components/CaseSelector/CaseSelector';
-import DrawerWithDetails from './components/drawer-with-details/DrawerWithDetails';
-import DateSelector from './components/date-selector/DateSelector';
-import Logo from './components/logo/Logo';
+import { HomePage, WaterPage } from './pages';
 import { DataContext, reducer, initState } from './context';
 
 import messages from './i18n';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <WaterPage />,
+  },
+  {
+    path: "/home",
+    element: <HomePage />,
+  },
+]);
 
 function App() {
   //@ts-ignore
@@ -21,18 +32,12 @@ function App() {
 
   return (
     <DataContext.Provider value={providerValue}>
-      <IntlProvider messages={messages.en} locale="en" defaultLocale="en">
-        <CaseSelector className="max-w-xs absolute left-3 top-3 z-10" />
-
-        <ImageComparator />
-
-        <Logo className="absolute left-3 bottom-3" />
-        <DateSelector className="absolute bottom-3 left-1/2 transform -translate-x-1/2" />
-
-        <DrawerWithDetails />
+      <IntlProvider messages={messages['en']} locale="en" defaultLocale="en">
+        <RouterProvider router={router} />
       </IntlProvider>
     </DataContext.Provider>
   );
 }
+
 
 export default App;
