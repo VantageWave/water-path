@@ -88,10 +88,6 @@ const DateSelector = ({ className }: DateSelectorProps) => {
   const [selectedStartDate, setSelectedStartDate] = useState<string>('');
   const { formatMessage } = useIntl();
 
-  console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-
-  console.log(formatMessage(messages.endDate));
-
   return (
     <Card className={`${className} dark:bg-foreground-100/80 px-0 py-1`}>
       <CardBody className="p-0">

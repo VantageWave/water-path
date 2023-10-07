@@ -1,0 +1,47 @@
+[
+  {
+    "filename": "2014-03-14_Landsat_NDWI.tif",
+    "date": "2014-03-14",
+    "case": "chad_lake",
+    "metadata": {
+      "area": 159.0749,
+      "unit": "km"
+    }
+  },
+  {
+    "filename": "2019-01-23_Landsat_NDWI.tif",
+    "date": "2019-01-23",
+    "case": "chad_lake",
+    "metadata": {
+      "area": 195.5524,
+      "unit": "km"
+    }
+  },
+  {
+    "filename": "2020-10-24_Landsat_NDWI.tif",
+    "date": "2020-10-24",
+    "case": "chad_lake",
+    "metadata": {
+      "area": 184.0444,
+      "unit": "km"
+    }
+  },
+  {
+    "filename": "2022-06-24_Landsat_NDWI.tif",
+    "date": "2022-06-24",
+    "case": "chad_lake",
+    "metadata": {
+      "area": 176.2057,
+      "unit": "km"
+    }
+  },
+  {
+    "filename": "2023-09-07_Landsat_NDWI.tif",
+    "date": "2023-09-07",
+    "case": "chad_lake",
+    "metadata": {
+      "area": 219.0071,
+      "unit": "km"
+    }
+  }
+]
