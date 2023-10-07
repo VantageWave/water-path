@@ -90,7 +90,7 @@ const DateSelector = ({ className }: DateSelectorProps) => {
   return (
     <Card className={`${className} dark:bg-foreground-100/80 px-0 py-1`}>
       <CardBody className="p-0">
-        <div className="items-center justify-center gap-2">
+      <div className="items-center justify-center gap-2">
           <DropdownSelector
             text={formatMessage(messages.startDate)}
             selectedStartDate={'any'}

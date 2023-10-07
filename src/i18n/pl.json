@@ -1,5 +1,5 @@
 {
-  "src.components.CaseSelector.label": "etykieta",
+  "src.components.CaseSelector.label": "Wybierz dane",
   "src.components.CaseSelector.lake1": "Jezioro Wilczyńskie",
   "src.components.CaseSelector.lake2": "Jezioro Aralskie",
   "src.components.CaseSelector.placeholder": "znacznik",
@@ -10,5 +10,6 @@
   "src.components.date-selector.endDate": "Data zakończenia",
   "src.components.date-selector.startDate": "Data rozpoczęcia",
   "src.components.drawer-with-details.details-tabs.information-tab.location": "Lokalizacja",
-  "src.components.drawer-with-details.details-tabs.information-tab.name": "Nazwa"
+  "src.components.drawer-with-details.details-tabs.information-tab.name": "Nazwa",
+  "src.pages.HomePage.explore": "ODKRYJ"
 }
