@@ -4,7 +4,8 @@
     "date": "2018-04-06",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1.953
+      "area": 1.953,
+      "unit": "km"
     }
   },
   {
@@ -12,7 +13,8 @@
     "date": "2018-10-13",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1.5995
+      "area": 1.5995,
+      "unit": "km"
     }
   },
   {
@@ -20,7 +22,8 @@
     "date": "2019-09-05",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1.5774
+      "area": 1.5774,
+      "unit": "km"
     }
   },
   {
@@ -28,7 +31,8 @@
     "date": "2020-09-14",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1.4857
+      "area": 1.4857,
+      "unit": "km"
     }
   },
   {
@@ -36,7 +40,8 @@
     "date": "2021-09-09",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1.4055
+      "area": 1.4055,
+      "unit": "km"
     }
   },
   {
@@ -44,7 +49,8 @@
     "date": "2022-10-07",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1.3789
+      "area": 1.3789,
+      "unit": "km"
     }
   },
   {
@@ -52,7 +58,8 @@
     "date": "2023-09-27",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1.3665
+      "area": 1.3665,
+      "unit": "km"
     }
   }
 ]
