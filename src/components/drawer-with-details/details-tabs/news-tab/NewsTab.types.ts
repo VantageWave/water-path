@@ -10,7 +10,7 @@ export interface NewsCaseStructured {
 
 export interface NewsContent {
   news: NewsItem[];
-  analysis: NewsAnalysis;
+  summary: NewsSummary;
 }
 
 export interface NewsItem {
@@ -21,4 +21,4 @@ export interface NewsItem {
   description: string;
 }
 
-export type NewsAnalysis = Record<EducationLevel, string>;
+export type NewsSummary = Record<EducationLevel, string>;

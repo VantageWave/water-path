@@ -2,4 +2,5 @@ import type { EducationLevel } from '../../school-grade-switcher/SchoolGradeSwit
 
 export interface DetailsTabsProps {
   level: EducationLevel;
+  className?: string;
 }
