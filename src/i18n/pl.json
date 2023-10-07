@@ -1,13 +1,14 @@
 {
-    "src.components.CaseSelector.lake1": "Jezioro Wilczyńskie",
-    "src.components.CaseSelector.lake2": "Jezioro Aralskie",
-    "src.components.CaseSelector.san": "San",
-    "src.components.CaseSelector.placeholder": "placeholder",
-    "src.components.CompareImage.area": "Area",
-    "src.components.CompareImage.selectEndDate": "Select end date",
-    "src.components.CompareImage.selectStartDate": "Select start date",
-    "src.components.date-selector.endDate": "End date",
-    "src.components.date-selector.startDate": "Start date",
-    "src.components.drawer-with-details.details-tabs.information-tab.location": "Location",
-    "src.components.drawer-with-details.details-tabs.information-tab.name": "Name"
+  "src.components.CaseSelector.label": "etykieta",
+  "src.components.CaseSelector.lake1": "Jezioro Wilczyńskie",
+  "src.components.CaseSelector.lake2": "Jezioro Aralskie",
+  "src.components.CaseSelector.placeholder": "znacznik",
+  "src.components.CaseSelector.san": "San",
+  "src.components.CompareImage.area": "Powierzchnia",
+  "src.components.CompareImage.selectEndDate": "Wybierz datę zakończenia",
+  "src.components.CompareImage.selectStartDate": "Wybierz datę rozpoczęcia",
+  "src.components.date-selector.endDate": "Data zakończenia",
+  "src.components.date-selector.startDate": "Data rozpoczęcia",
+  "src.components.drawer-with-details.details-tabs.information-tab.location": "Lokalizacja",
+  "src.components.drawer-with-details.details-tabs.information-tab.name": "Nazwa"
 }

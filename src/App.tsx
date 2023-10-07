@@ -9,6 +9,7 @@ import { HomePage, WaterPage } from './pages';
 import { DataContext, reducer, initState } from './context';
 
 import messages from './i18n';
+import { LanguagePicker } from './components/LanguagePicker/languagePicker';
 
 const router = createBrowserRouter([
   {
