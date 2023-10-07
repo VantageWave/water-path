@@ -72,13 +72,13 @@ const DropdownSelector = ({
       >
         {selectedStartDate === 'any'
           ? data
-              .slice(0, -1)
-              .map((ob) => <DropdownItem key={ob.date}>{ob.date}</DropdownItem>)
+            .slice(0, -1)
+            .map((ob) => <DropdownItem key={ob.date}>{ob.date}</DropdownItem>)
           : data
-              .filter((item) => item.date > selectedStartDate)
-              .map((ob) => (
-                <DropdownItem key={ob.date}>{ob.date}</DropdownItem>
-              ))}
+            .filter((item) => item.date > selectedStartDate)
+            .map((ob) => (
+              <DropdownItem key={ob.date}>{ob.date}</DropdownItem>
+            ))}
       </DropdownMenu>
     </Dropdown>
   );
@@ -87,6 +87,7 @@ const DropdownSelector = ({
 const DateSelector = ({ className }: DateSelectorProps) => {
   const [selectedStartDate, setSelectedStartDate] = useState<string>('');
   const { formatMessage } = useIntl();
+
   return (
     <Card className={`${className} dark:bg-foreground-100/80 px-0 py-1`}>
       <CardBody className="p-0">
