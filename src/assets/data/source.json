@@ -6,9 +6,9 @@
       "imageUrl": "https://static.wirtualnemedia.pl/media/top/airbus-sentinel2b.jpg"
     },
     "summary": {
-      "k-5": "",
-      "6-8": "",
-      "9-12": ""
+      "k-5": "Sentinel-2B is a space camera that takes cool pictures of our Earth. It goes around our planet and takes pictures from space. Scientists use these pictures to study nature and cities. It's also helpful when there are big problems. The camera can see lots of colors, like a rainbow, which makes it really good at its job!",
+      "6-8": "Sentinel-2B is like a space camera that takes fancy pictures of Earth. It orbits around our planet, clicking photos from space. These pictures help scientists learn about our environment, like forests and cities. It can also help during disasters. Sentinel-2B's camera is super good at taking pictures with many colors, like a rainbow, which makes it extra useful.",
+      "9-12": "Sentinel-2B is a satellite in the European Space Agency's Copernicus program. It collects detailed optical imagery of the Earth's surface using a MultiSpectral Instrument (MSI) with 13 spectral bands. The satellite follows a sun-synchronous orbit, capturing data as it passes over different regions. This data is used for applications such as environmental monitoring, land cover classification, and disaster management. Sentinel-2B's high-resolution, multi-spectral capabilities make it valuable for Earth observation."
     }
   }
 }
