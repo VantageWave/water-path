@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { defineMessages, useIntl } from 'react-intl';
 import "./homePages.css";
 import { LanguagePicker } from '../components/LanguagePicker/languagePicker';
+import Logo from '../components/logo/Logo';
 
 export const HomePage = () => {
     const { formatMessage } = useIntl();
@@ -31,6 +32,7 @@ export const HomePage = () => {
                     </button>
                 </Link>
             </div>
+            <Logo className="absolute left-2 bottom-2 z-10" />
             <h1 className="title">
                 Water Path
             </h1>

@@ -72,10 +72,10 @@ const DropdownSelector = ({
       >
         {selectedStartDate === 'any'
           ? data
-              .slice(0, -1)
+              ?.slice(0, -1)
               .map((ob) => <DropdownItem key={ob.date}>{ob.date}</DropdownItem>)
           : data
-              .filter((item) => item.date > selectedStartDate)
+              ?.filter((item) => item.date > selectedStartDate)
               .map((ob) => (
                 <DropdownItem key={ob.date}>{ob.date}</DropdownItem>
               ))}

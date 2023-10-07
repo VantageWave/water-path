@@ -14,9 +14,8 @@ export const WaterPage = () => (
         exit={{ x: "100%", opacity: 0 }}
         transition={{ duration: 0.6 }}
     >
-        <CaseSelector className="max-w-xs absolute left-3 top-3 z-10" />
+        <CaseSelector className="max-w-xs absolute left-2 top-2 z-10" />
         <ImageComparator />
-        <Logo className="absolute left-3 bottom-3" />
         <DateSelector className="absolute bottom-3 left-1/2 transform -translate-x-1/2" />
         <DrawerWithDetails />
         <LanguagePicker />
