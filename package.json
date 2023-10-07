@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "extract-messages": "extract-messages -l=en,pl -o ./src/i18n -d en --flat true ./src/**/*.{js,jsx,ts,tsx}"
+    "extract-messages": "formatjs extract src/**/*.ts* --ignore=**/*.d.ts --out-file src/i18n/en.json --id-interpolation-pattern [sha512:contenthash:base64:6] --flatten & npm run transpile",
+    "transpile": "node ./src/i18n/transpile.cjs"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -16,7 +17,6 @@
     "@mui/icons-material": "^5.14.12",
     "@mui/material": "^5.14.12",
     "@nextui-org/react": "^2.1.13",
-    "extract-react-intl-messages": "^4.1.1",
     "focus-trap-react": "^10.2.2",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
@@ -26,10 +26,11 @@
     "react-world-flags": "^1.6.0"
   },
   "devDependencies": {
+    "@formatjs/cli": "^6.2.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@types/react-world-flags": "^1.4.3",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.16",
