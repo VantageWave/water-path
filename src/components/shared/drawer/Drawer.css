@@ -7,7 +7,6 @@
   background-color: hsl(var(--nextui-foreground-50));
   width: var(--drawer-width);
   height: 100%;
-  overflow: auto;
   position: fixed;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   transition: transform var(--transition-speed) ease;

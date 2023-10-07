@@ -9,13 +9,11 @@ const DrawerWithDetails = () => {
 
   return (
     <Drawer position="right" className="p-5" enableToggle>
-      <DetailsTabs level={level}/>
+      <DetailsTabs level={level} />
 
-      <SchoolGradeSwitcher
-        level={level}
-        setLevel={setLevel}
-        className="absolute bottom-3 left-1/2 transform -translate-x-1/2"
-      />
+      <footer className="flex justify-center bg-black w-full absolute bottom-0 py-2 left-1/2 transform -translate-x-1/2">
+        <SchoolGradeSwitcher level={level} setLevel={setLevel} />
+      </footer>
     </Drawer>
   );
 };

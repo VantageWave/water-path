@@ -1,19 +1,23 @@
 import { useContext, useEffect, useMemo, useState } from 'react';
-import { Skeleton } from '@nextui-org/react';
+import { ScrollShadow, Skeleton } from '@nextui-org/react';
 import { DataContext } from '../../../../context';
 import informations from '../../../../assets/data/informations.json';
 import {
   InformationCaseStructured,
-  InformationContent,
+  InformationPlace,
+  InformationTabProps,
 } from './InformationTab.types';
 
-const InformationTab = () => {
+const InformationTab = ({ level }: InformationTabProps) => {
   const {
     state: { case: dataCase },
   } = useContext(DataContext);
 
-  const [loaded, setLoaded] = useState(false);
-  const [content, setContent] = useState<InformationContent | null>(null);
+  const [placeLoaded, setPlaceLoaded] = useState(false);
+  const [analysisLoaded, setAnalysisLoaded] = useState(false);
+
+  const [place, setPlace] = useState<InformationPlace | null>(null);
+  const [analysis, setAnalysis] = useState<string>('');
 
   const typeToInformationCaseStructured = (
     json: unknown,
@@ -26,33 +30,70 @@ const InformationTab = () => {
     [],
   );
 
-  const loadInformations = () => {
-    setLoaded(false);
+  const loadPlace = () => {
+    setPlaceLoaded(false);
 
     setTimeout(() => {
-      setContent(caseInformation[`case-${dataCase ?? 1}`]);
-      setLoaded(true);
+      setPlace(caseInformation[`case-${dataCase ?? 1}`].place);
+      setPlaceLoaded(true);
     }, 1000);
   };
 
-  useEffect(() => loadInformations(), [dataCase]);
+  const loadAnalysis = () => {
+    setAnalysisLoaded(false);
+
+    setTimeout(() => {
+      const analysis = caseInformation[`case-${dataCase ?? 1}`].analysis[level];
+
+      setAnalysis(analysis);
+      setAnalysisLoaded(true);
+    }, 1000);
+  };
+
+  useEffect(() => loadPlace(), [dataCase]);
+
+  useEffect(() => loadAnalysis(), [level, dataCase]);
 
   return (
     <>
-      <Skeleton isLoaded={loaded} className="rounded-lg">
-        <img
-          src={content?.imageUrl}
-          className="h-[200px] w-[100%] rounded-lg"
-        />
-      </Skeleton>
-      <div className="mt-3">
-        <Skeleton isLoaded={loaded} className="w-[100%] rounded-lg">
-          <div className="flex justify-between">
-            <strong>Name: </strong>
-            <span>{content?.name}</span>
-          </div>
+      <div className="mb-[24px]">
+        <Skeleton isLoaded={placeLoaded} className="rounded-lg">
+          <img
+            src={place?.imageUrl}
+            className="h-[200px] w-[100%] rounded-lg"
+          />
         </Skeleton>
+        <div className="mt-3">
+          <Skeleton isLoaded={placeLoaded} className="w-[100%] rounded-lg">
+            <div className="flex justify-between px-1">
+              <strong>Name: </strong>
+              <span>{place?.name}</span>
+            </div>
+          </Skeleton>
+
+          <Skeleton isLoaded={placeLoaded} className="w-[100%] mt-2 rounded-lg">
+            <div className="flex justify-between px-1">
+              <strong>Location: </strong>
+              <span>{place?.location}</span>
+            </div>
+          </Skeleton>
+        </div>
       </div>
+
+      {analysisLoaded ? (
+        <ScrollShadow className="w-full h-[42%] pb-[10px] whitespace-break-spaces">
+          {analysis}
+        </ScrollShadow>
+      ) : (
+        <div className="flex flex-col	gap-[12px]">
+          {Array.from(Array(6)).map((_, i) => (
+            <Skeleton
+              key={i}
+              className="w-full h-4 rounded-lg bg-secondary"
+            ></Skeleton>
+          ))}
+        </div>
+      )}
     </>
   );
 };
