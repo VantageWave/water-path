@@ -16,7 +16,6 @@
     "focus-trap-react": "^10.2.2",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
-    "react-compare-image": "^3.4.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-intl": "^6.4.7"
