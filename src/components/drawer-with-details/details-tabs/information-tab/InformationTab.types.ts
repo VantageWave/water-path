@@ -9,6 +9,14 @@ export interface InformationCaseStructured {
 }
 
 export interface InformationContent {
+  place: InformationPlace;
+  analysis: InformationAnalysis;
+}
+
+export interface InformationPlace {
   name: string;
+  location: string;
   imageUrl: string;
 }
+
+export type InformationAnalysis = Record<EducationLevel, string>;

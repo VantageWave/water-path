@@ -1,7 +1,7 @@
 export interface SchoolGradeSwitcherProps {
   level: EducationLevel;
   setLevel: (key: EducationLevel) => void;
-  className: string;
+  className?: string;
 }
 
 export enum EducationLevel {
