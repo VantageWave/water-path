@@ -4,7 +4,7 @@
     "date": "2018-04-06",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1200
+      "area": 1.953
     }
   },
   {
@@ -12,7 +12,7 @@
     "date": "2018-10-13",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1150
+      "area": 1.5995
     }
   },
   {
@@ -20,7 +20,7 @@
     "date": "2019-09-05",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1180
+      "area": 1.5774
     }
   },
   {
@@ -28,7 +28,7 @@
     "date": "2020-09-14",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1195
+      "area": 1.4857
     }
   },
   {
@@ -36,7 +36,7 @@
     "date": "2021-09-09",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1210
+      "area": 1.4055
     }
   },
   {
@@ -44,7 +44,7 @@
     "date": "2022-10-07",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1225
+      "area": 1.3789
     }
   },
   {
@@ -52,7 +52,7 @@
     "date": "2023-09-27",
     "case": "wilczynskie_lake",
     "metadata": {
-      "area": 1230
+      "area": 1.3665
     }
   }
 ]
