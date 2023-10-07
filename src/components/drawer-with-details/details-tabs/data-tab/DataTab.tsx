@@ -3,6 +3,7 @@ import { DataCaseStructured, DataSource, DataTabProps } from './DataTab.types';
 import { DataContext } from '../../../../context';
 import dataSource from '../../../../assets/data/source.json';
 import { ScrollShadow, Skeleton } from '@nextui-org/react';
+import { defineMessages, useIntl } from 'react-intl';
 
 const DataTab = ({ level }: DataTabProps) => {
   const {
@@ -48,6 +49,8 @@ const DataTab = ({ level }: DataTabProps) => {
 
   useEffect(() => loadSummary(), [level, dataCase]);
 
+  const { formatMessage } = useIntl();
+
   return (
     <ScrollShadow className="max-h-[calc(100%_-_60px)]">
       <div className="mb-[24px]">
@@ -60,7 +63,7 @@ const DataTab = ({ level }: DataTabProps) => {
         <div className="mt-3">
           <Skeleton isLoaded={sourceLoaded} className="w-[100%] rounded-lg">
             <div className="flex justify-between px-1.5">
-              <strong>Name: </strong>
+              <strong>{formatMessage(messages.name)}: </strong>
               <span>{source?.name}</span>
             </div>
           </Skeleton>
@@ -70,7 +73,7 @@ const DataTab = ({ level }: DataTabProps) => {
             className="w-[100%] mt-2 rounded-lg"
           >
             <div className="flex justify-between px-1.5">
-              <strong>Launch year: </strong>
+              <strong>{formatMessage(messages.year)}: </strong>
               <span>{source?.launchYear}</span>
             </div>
           </Skeleton>
@@ -94,5 +97,16 @@ const DataTab = ({ level }: DataTabProps) => {
     </ScrollShadow>
   );
 };
+
+const messages = defineMessages({
+  name: {
+    id: 'src.components.drawer-with-details.data-tab.name',
+    defaultMessage: 'Name',
+  },
+  year: {
+    id: 'src.components.drawer-with-details.data-tab.year',
+    defaultMessage: 'Launch year',
+  },
+});
 
 export default DataTab;

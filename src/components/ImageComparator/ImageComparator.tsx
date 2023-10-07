@@ -17,7 +17,7 @@ const ImageComparator = () => {
   const endData = currentData.find((el) => el.date === endDate);
 
   return (
-    <div className="relative border-r">
+    <div className="relative border-r text-center">
       <ReactCompareImage
         leftImage={startData?.filename || ''}
         rightImage={endData?.filename || ''}
