@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Card,
   Dropdown,
@@ -30,7 +31,7 @@ const DropdownSelector = ({
   const selectedValue = useMemo(() => Array.from(selectedKey), [selectedKey]);
   return (
     <Dropdown>
-      <DropdownTrigger>
+      <DropdownTrigger className="px-2">
         {selectedStartDate === '' ? (
           <Button variant="bordered" className="capitalize" isDisabled>
             {selectedValue}
@@ -58,9 +59,7 @@ const DropdownSelector = ({
                 type: ActionType.UPDATE_START_DATE,
                 payload: startDate,
               });
-              console.log(startDate);
             } else {
-              console.log(startDate);
               dispatch({
                 type: ActionType.UPDATE_END_DATE,
                 payload: startDate,
@@ -87,9 +86,9 @@ const DropdownSelector = ({
 const DateSelector = ({ className }: DateSelectorProps) => {
   const [selectedStartDate, setSelectedStartDate] = useState<string>('');
   return (
-    <Card className={`${className} dark:bg-foreground-100/80 px-3`}>
-      <CardBody className="p-1">
-        <div className="flex items-center justify-center gap-2">
+    <Card className={`${className} dark:bg-foreground-100/80 px-0 py-1`}>
+      <CardBody className="p-0">
+        <div className="items-center justify-center gap-2">
           <DropdownSelector
             text="Start date"
             selectedStartDate={'any'}

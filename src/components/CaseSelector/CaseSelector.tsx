@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { Select, SelectItem } from '@nextui-org/react';
 import { CaseSelectorProps } from './CaseSelector.types';
