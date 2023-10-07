@@ -55,7 +55,7 @@ const InformationTab = ({ level }: InformationTabProps) => {
   useEffect(() => loadAnalysis(), [level, dataCase]);
 
   return (
-    <>
+    <ScrollShadow className="max-h-[calc(100%_-_60px)]">
       <div className="mb-[24px]">
         <Skeleton isLoaded={placeLoaded} className="rounded-lg">
           <img
@@ -81,12 +81,12 @@ const InformationTab = ({ level }: InformationTabProps) => {
       </div>
 
       {analysisLoaded ? (
-        <ScrollShadow className="w-full h-[42%] pb-[10px] text-[14px] indent-5 whitespace-break-spaces">
+        <span className="w-full pb-[10px] text-[14px] indent-5 whitespace-break-spaces">
           {analysis}
-        </ScrollShadow>
+        </span>
       ) : (
         <div className="flex flex-col	gap-[12px]">
-          {Array.from(Array(6)).map((_, i) => (
+          {Array.from(Array(12)).map((_, i) => (
             <Skeleton
               key={i}
               className="w-full h-4 rounded-lg bg-secondary"
@@ -94,7 +94,7 @@ const InformationTab = ({ level }: InformationTabProps) => {
           ))}
         </div>
       )}
-    </>
+    </ScrollShadow>
   );
 };
 
