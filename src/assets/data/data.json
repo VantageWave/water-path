@@ -1,0 +1,58 @@
+[
+  {
+    "filename": "jezioro_wilczynskie/2018-04-06-00_00_2018-04-06-23_59_Sentinel-2_L2A_NDWI.png",
+    "date": "2018-04-06",
+    "case": "wilczynskie_lake",
+    "metadata": {
+      "area": 1200
+    }
+  },
+  {
+    "filename": "jezioro_wilczynskie/2018-10-13-00_00_2018-10-13-23_59_Sentinel-2_L2A_NDWI.png",
+    "date": "2018-10-13",
+    "case": "wilczynskie_lake",
+    "metadata": {
+      "area": 1150
+    }
+  },
+  {
+    "filename": "jezioro_wilczynskie/2019-09-05-00_00_2019-09-05-23_59_Sentinel-2_L2A_NDWI.png",
+    "date": "2019-09-05",
+    "case": "wilczynskie_lake",
+    "metadata": {
+      "area": 1180
+    }
+  },
+  {
+    "filename": "jezioro_wilczynskie/2020-09-14-00_00_2020-09-14-23_59_Sentinel-2_L2A_NDWI.png",
+    "date": "2020-09-14",
+    "case": "wilczynskie_lake",
+    "metadata": {
+      "area": 1195
+    }
+  },
+  {
+    "filename": "jezioro_wilczynskie/2021-09-09-00_00_2021-09-09-23_59_Sentinel-2_L2A_NDWI.png",
+    "date": "2021-09-09",
+    "case": "wilczynskie_lake",
+    "metadata": {
+      "area": 1210
+    }
+  },
+  {
+    "filename": "jezioro_wilczynskie/2022-10-07-00_00_2022-10-07-23_59_Sentinel-2_L2A_NDWI.png",
+    "date": "2022-10-07",
+    "case": "wilczynskie_lake",
+    "metadata": {
+      "area": 1225
+    }
+  },
+  {
+    "filename": "jezioro_wilczynskie/2023-09-27-00_00_2023-09-27-23_59_Sentinel-2_L2A_NDWI.png",
+    "date": "2023-09-27",
+    "case": "wilczynskie_lake",
+    "metadata": {
+      "area": 1230
+    }
+  }
+]
