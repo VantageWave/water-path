@@ -4,7 +4,7 @@ import { Select, SelectItem } from '@nextui-org/react';
 import { CaseSelectorProps } from './CaseSelector.types';
 import { DataContext, ActionType } from '../../context';
 
-const CaseSelector = ({ className }) => {
+const CaseSelector = ({ className }: CaseSelectorProps) => {
   const { formatMessage } = useIntl();
   const { dispatch, state } = useContext(DataContext);
 
