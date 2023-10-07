@@ -45,11 +45,37 @@
     }
   },
   "case-2": {
-    "news": [],
+    "news": [{
+      "title": "Nigerian Embassy in Chad donates relief materials to Baga Sola refugee camp to mark 63rd Independence Anniversary",
+      "link": "https://www.vanguardngr.com/2023/10/nigerian-embassy-in-chad-donates-relief-materials-to-baga-sola-refugee-camp-to-mark-63rd-independence-anniversary/",
+      "snippet": "... water resources, in a sustainable and equitable way, as well as promote ... Lake Chad region. The initiative may not solve all their problems...",
+      "date": "1 day ago",
+      "source": "Vanguard News",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiwtqsJBLgVFG3g2BjBc3LwmOyJ3OCMEJKAWhHA_J4M9iu1VGutXBkwmLpOg&s",
+      "position": 1
+    },
+    {
+      "title": "Climate-fueled Violence and Displacement in the Lake Chad Basin ...",
+      "link": "https://www.refugeesinternational.org/reports-briefs/climate-fueled-violence-and-displacement-in-the-lake-chad-basin-focus-on-chad-and-cameroon/",
+      "snippet": "... problems of Lake Chad Basin. At present, the Commission is ... Cover Photo: A Chadian boy fills a bucket with water from the Lake Chad on November...",
+      "date": "8 months ago",
+      "source": "Refugees International",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNpgtmmlmx5wHq0pdZoTWngNVxTViUeUnlAUM4lyrf9ck4OhrDyibItv9NoQ&s",
+      "position": 2
+    },
+    {
+      "title": "The Lake Chad Basin is a security nightmare. 5 guidelines for ...",
+      "link": "https://theconversation.com/the-lake-chad-basin-is-a-security-nightmare-5-guidelines-for-finding-solutions-199991",
+      "snippet": "Lake Chad, the primary source of water in the region, has shrunk significantly due to drought since the 1960s. In 2022, the region was hit...",
+      "date": "7 months ago",
+      "source": "The Conversation",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnyrvfYDxlBWFC-Js1XtWSWDG1T744NQRDWXRB_QJPYSsqjzRzAfqVqQdJKQ&s",
+      "position": 3
+    }],
     "summary": {
-      "k-5": "",
-      "6-8": "",
-      "9-12": ""
+      "k-5": "Imagine if your neighborhood park started to dry up and there wasn't enough water for the plants and trees. Now, imagine if that park was so big that it covered parts of four countries - that's what's happening in a place called the Lake Chad Basin. Because of climate change, there's less water and land for people to use. This has led to fights between different groups who all need these resources to survive and has forced many people to leave their homes. Countries are trying their best to help. For example, Chad, one of the countries, is hosting more than one million people who had to leave their homes. But this is a big challenge and needs a lot of resources. There have been big meetings where leaders talk about how to solve these problems. They agreed that they need to work together, put more money into tackling climate change, and help the people who had to leave their homes. But for things to get better, more help is needed from countries all over the world, and there needs to be even more focus on ways to stop climate change.",
+      "6-8": "The Lake Chad Basin is a large area that includes parts of several countries, such as Cameroon, Chad, Niger, and Nigeria. This area is facing major problems because of climate change. Basically, as the weather patterns change, water and land are becoming scarcer which means there's not enough for everyone who lives there. This causes conflicts between communities who are fighting to access these resources. It has also made many people leave their homes, creating a situation where there are many refugees that need help. Countries like Chad are doing their best to support these refugees, but the situation is very challenging, especially because it also affects these countries' resources. There have been meetings and conferences where countries and organizations are trying to find solutions to these problems. They've recognized that they need to work together and put more money and resources into dealing with climate change, violence, and making sure refugees have what they need. However, to really make things better in the Lake Chad Basin, there needs to be more help from the international community and a larger focus on actions that can help combat climate change.",
+      "9-12": "The Lake Chad Basin, including Cameroon, Chad, Niger, and Nigeria, is grappling with severe climate change-induced issues, including resource scarcity and forced displacement. Over the past decades, altering climatic conditions have exacerbated competition for critical resources such as land and water, leading to a rise in intercommunal conflict and displacement, particularly evident in areas like Cameroon’s Logone Birni commune. Climate-driven scarcity is not only causing displacement, but it's also contributing to regional instability and violence. This worsening situation is overlaid with the challenges of hosting and supporting displaced populations amidst shrinking resources and regional and national strain. Chad, for example, hosts about 1.1 million displaced persons, a situation that puts a significant burden on the country's resources. Efforts have been made to address this climate-induced crisis, such as the Third High-Level Conference on Lake Chad Basin Region in 2023, where the need to address the link between climate change, violence, and displacement was emphasized. The conference also highlighted the importance of more funds to manage the harmful consequences of climate change, which so far remains critically underfunded. To achieve sustainable solutions and a peaceful future in the Lake Chad Basin, greater international collaboration, financial commitment, and strategic approaches focusing on climate action are urgently needed."
     }
   }
 }
