@@ -78,7 +78,7 @@ const DataTab = ({ level }: DataTabProps) => {
       </div>
 
       {summaryLoaded ? (
-        <span className="w-full pb-[10px] text-[14px] indent-5 whitespace-break-spaces">
+        <span className="w-full text-[14px] indent-5 whitespace-break-spaces">
           {summary}
         </span>
       ) : (
