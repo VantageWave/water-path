@@ -1,4 +1,4 @@
-import { Tab, Tabs } from '@nextui-org/react';
+import React, { Tab, Tabs } from '@nextui-org/react';
 import InformationTab from './information-tab/InformationTab';
 import NewsTab from './news-tab/NewsTab';
 import type { DetailsTabsProps } from './DetailsTabs.types';

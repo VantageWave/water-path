@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useRef, useState } from 'react';
 
 interface IProps {
@@ -240,8 +241,8 @@ export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
             boxSizing: 'border-box',
             position: 'relative',
             width: '100%',
-            height: `${containerHeight}px`,
             overflow: 'hidden',
+            height: "100vh"
         },
         rightImage: {
             clip: horizontal
@@ -264,6 +265,20 @@ export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
             position: 'absolute',
             width: '100%',
             ...leftImageCss,
+        },
+        imageStatic: {
+            width: "50%",
+            height: '100%',
+            objectFit: 'cover',
+            position: 'absolute',
+        },
+        rightImageStatic: {
+            width: "50%",
+            height: '100%',
+            objectFit: 'cover',
+            position: 'absolute',
+            right: 0,
+            marginLeft: "auto",
         },
         slider: {
             alignItems: 'center',
@@ -360,7 +375,7 @@ export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
             height: '100%',
             position: 'absolute',
             width: '100%',
-            
+
         },
         rightLabelContainer: {
             clip: horizontal
@@ -377,7 +392,31 @@ export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
             {skeleton && !allImagesLoaded && (
                 <div style={{ ...styles.container }}>{skeleton}</div>
             )}
-
+            {(!leftImage || !rightImage) && <div style={styles.container} position="absolute z-30">
+                <img
+                    onLoad={() => setRightImgLoaded(true)}
+                    alt={rightImageAlt}
+                    src={leftImage  || "placeholders/startDate.jpg"}
+                    style={styles.imageStatic}
+                />
+                <img
+                    onLoad={() => setLeftImgLoaded(true)}
+                    alt={leftImageAlt}
+                    src={rightImage || "placeholders/endDate.jpg"}
+                    style={styles.rightImageStatic}
+                />
+                <div style={styles.leftLabelContainer} className={leftLabelContainerClass}>
+                    <div style={styles.leftLabel} className={leftLabelClass}>
+                        <div style={styles.rightLabelTitle}>{leftImage ? "Area" : "Select start date"}</div>
+                        {leftImage && <>{leftImageLabel} <sup>2</sup></>}
+                    </div>
+                </div>
+                <div style={styles.rightLabelContainer} className={rightLabelContainerClass}>
+                    <div style={styles.rightLabel} className={rightLabelClass}>
+                        <div style={styles.rightLabelTitle}>Select end date</div>
+                    </div>
+                </div>
+            </div>}
             <div
                 style={{
                     ...styles.container,

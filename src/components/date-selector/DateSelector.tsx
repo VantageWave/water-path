@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Card,
   Dropdown,
@@ -58,9 +59,7 @@ const DropdownSelector = ({
                 type: ActionType.UPDATE_START_DATE,
                 payload: startDate,
               });
-              console.log(startDate);
             } else {
-              console.log(startDate);
               dispatch({
                 type: ActionType.UPDATE_END_DATE,
                 payload: startDate,
