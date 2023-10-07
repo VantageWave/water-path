@@ -1,13 +1,12 @@
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import { IntlProvider } from 'react-intl';
 import {
   createBrowserRouter,
-  RouterProvider,
   Routes,
   Route,
   useLocation,
-} from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+} from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import './App.css';
 import { HomePage, WaterPage } from './pages';
 import { DataContext, reducer, initState } from './context';
@@ -16,11 +15,11 @@ import messages from './i18n';
 
 const router = createBrowserRouter([
   {
-    path: "/waterPath",
+    path: '/waterPath',
     element: <WaterPage />,
   },
   {
-    path: "/",
+    path: '/',
     element: <HomePage />,
   },
 ]);
@@ -35,9 +34,27 @@ function App() {
     dispatch,
   };
 
+  useEffect(() => {
+    if (
+      'navigator' in window &&
+      (
+        navigator as Navigator & { userAgentData: { platform: string } }
+      )?.userAgentData?.platform
+        ?.toLocaleLowerCase()
+        .includes('win')
+    ) {
+      const body = document.querySelector('body')!;
+      body.classList.add('windows');
+    }
+  }, []);
+
   return (
     <DataContext.Provider value={providerValue}>
-      <IntlProvider messages={messages[state.lang]} locale={state.lang} defaultLocale="en">
+      <IntlProvider
+        messages={messages[state.lang]}
+        locale={state.lang}
+        defaultLocale="en"
+      >
         {/* <RouterProvider router={router} /> */}
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
@@ -50,6 +67,5 @@ function App() {
     </DataContext.Provider>
   );
 }
-
 
 export default App;
