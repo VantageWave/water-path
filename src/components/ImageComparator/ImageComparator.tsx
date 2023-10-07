@@ -5,7 +5,7 @@ import waterData from '../../assets/data';
 
 const data = {
   1: waterData[1],
-  // 2: [monkey1, monkey2],
+  2: waterData[2],
   // 3: [landscape1, landscape2],
 };
 const ImageComparator = () => {

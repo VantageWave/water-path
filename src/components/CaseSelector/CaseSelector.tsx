@@ -15,12 +15,15 @@ const CaseSelector = ({ className }: CaseSelectorProps) => {
       placeholder={formatMessage(messages.placeholder)}
       variant="faded"
       onChange={(data) => {
-        dispatch({
-          type: ActionType.UPDATE_CASE,
-          payload: data.target.value,
-        });
+        if (data.target.value) {
+          dispatch({
+            type: ActionType.UPDATE_CASE,
+            payload: data.target.value,
+          });
+        }
       }}
       value={state.case}
+
       defaultSelectedKeys={[state.case?.toString()]}
       className={className}
     >

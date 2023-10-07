@@ -1,6 +1,6 @@
 [
   {
-    "filename": "2014-03-14_Landsat_NDWI.tif",
+    "filename": "lake_chad/2014-03-14_Landsat_NDWI.png",
     "date": "2014-03-14",
     "case": "chad_lake",
     "metadata": {
@@ -9,7 +9,7 @@
     }
   },
   {
-    "filename": "2019-01-23_Landsat_NDWI.tif",
+    "filename": "lake_chad/2019-01-23_Landsat_NDWI.png",
     "date": "2019-01-23",
     "case": "chad_lake",
     "metadata": {
@@ -18,7 +18,7 @@
     }
   },
   {
-    "filename": "2020-10-24_Landsat_NDWI.tif",
+    "filename": "lake_chad/2020-10-24_Landsat_NDWI.png",
     "date": "2020-10-24",
     "case": "chad_lake",
     "metadata": {
@@ -27,7 +27,7 @@
     }
   },
   {
-    "filename": "2022-06-24_Landsat_NDWI.tif",
+    "filename": "lake_chad/2022-06-24_Landsat_NDWI.png",
     "date": "2022-06-24",
     "case": "chad_lake",
     "metadata": {
@@ -36,7 +36,7 @@
     }
   },
   {
-    "filename": "2023-09-07_Landsat_NDWI.tif",
+    "filename": "lake_chad/2023-09-07_Landsat_NDWI.png",
     "date": "2023-09-07",
     "case": "chad_lake",
     "metadata": {
