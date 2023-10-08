@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { useEffect, useRef, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
+import { WaterLoader } from '../WaterLoader/WaterLoader';
 
 interface IProps {
   aspectRatio?: 'taller' | 'wider';
@@ -392,18 +393,19 @@ export const ReactCompareImage: React.FC<IProps> = (props: IProps) => {
   return (
     <>
       {skeleton && !allImagesLoaded && (
-        <div style={{ ...styles.container }}>{skeleton}</div>
+        // <div style={{ ...styles.container }}>{skeleton}</div>
+        <WaterLoader />
       )}
       {(!leftImage || !rightImage) && (
         <div style={styles.container} position="absolute z-30">
           <img
-            onLoad={() => setRightImgLoaded(true)}
+            // onLoad={() => setRightImgLoaded(true)}
             alt={rightImageAlt}
             src={leftImage || 'placeholders/startDate.jpg'}
             style={styles.imageStatic}
           />
           <img
-            onLoad={() => setLeftImgLoaded(true)}
+            // onLoad={() => setLeftImgLoaded(true)}
             alt={leftImageAlt}
             src={rightImage || 'placeholders/endDate.jpg'}
             style={styles.rightImageStatic}

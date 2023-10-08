@@ -1,7 +1,6 @@
 import { useEffect, useReducer } from 'react';
 import { IntlProvider } from 'react-intl';
 import {
-  createBrowserRouter,
   Routes,
   Route,
   useLocation,
@@ -12,17 +11,7 @@ import { HomePage, WaterPage } from './pages';
 import { DataContext, reducer, initState } from './context';
 
 import messages from './i18n';
-
-const router = createBrowserRouter([
-  {
-    path: '/waterPath',
-    element: <WaterPage />,
-  },
-  {
-    path: '/',
-    element: <HomePage />,
-  },
-]);
+import { WaterLoader } from './components/WaterLoader/WaterLoader';
 
 function App() {
   //@ts-ignore
@@ -55,12 +44,11 @@ function App() {
         locale={state.lang}
         defaultLocale="en"
       >
-        {/* <RouterProvider router={router} /> */}
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
-            {/* Routes */}
             <Route index element={<HomePage />} />
             <Route path="/waterPath" element={<WaterPage />} />
+            <Route path="/water" element={<WaterLoader />} />
           </Routes>
         </AnimatePresence>
       </IntlProvider>

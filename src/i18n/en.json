@@ -2,7 +2,7 @@
   "src.components.CaseSelector.label": "Select case",
   "src.components.CaseSelector.lake1": "Wilczyńskie Lake",
   "src.components.CaseSelector.lake2": "Chad Lake",
-  "src.components.CaseSelector.placeholder": "placeholder",
+  "src.components.CaseSelector.placeholder": "Choose data",
   "src.components.CompareImage.area": "Area",
   "src.components.CompareImage.selectEndDate": "Select end date",
   "src.components.CompareImage.selectStartDate": "Select start date",

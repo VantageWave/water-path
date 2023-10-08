@@ -2657,3 +2657,17 @@ button:hover .button-text {
     align-self: center;
     justify-self: center;
 }
+
+.waterContainer {
+    animation: fade 0.2s ease-in-out 1 forwards;
+}
+
+@keyframes fade{
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

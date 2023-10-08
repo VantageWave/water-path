@@ -2,7 +2,7 @@
   "src.components.CaseSelector.label": "Wybierz dane",
   "src.components.CaseSelector.lake1": "Jezioro Wilczyńskie",
   "src.components.CaseSelector.lake2": "Jezioro Czad",
-  "src.components.CaseSelector.placeholder": "Placeholder",
+  "src.components.CaseSelector.placeholder": "Wybierz dane",
   "src.components.CompareImage.area": "Powierzchnia",
   "src.components.CompareImage.selectEndDate": "Wybierz datę zakończenia",
   "src.components.CompareImage.selectStartDate": "Wybierz datę rozpoczęcia",
