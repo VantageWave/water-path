@@ -15,7 +15,7 @@ export const LanguagePicker = ({ isTop }: { isTop?: boolean }) => {
                 }}
                 className="cursor-pointer"
             >
-                <Flag code="us" height="28" width="28" />
+                <Flag code="us" height="32" width="32" />
             </div>
             <div
                 onClick={() => {

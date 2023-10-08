@@ -97,7 +97,7 @@ body {
     width: 4px;
     height: 1px;
     float: left;
-    animation: wave 1s infinite ease-in-out alternate;
+    animation: wave 1.2s infinite ease-in-out alternate;
     z-index: 1;
     position: absolute;
 }
@@ -2585,7 +2585,7 @@ button.learn-more .circle {
     margin: 0;
     width: 6rem;
     height: 6rem;
-    background: #282936;
+    background: #46a1de;
     border-radius: 3.25rem;
 }
 
@@ -2651,7 +2651,7 @@ button:hover .button-text {
 
 #container {
     position: absolute;
-    right: 5%;
+    right: 2%;
     top: 8%;
     grid-area: main;
     align-self: center;
