@@ -50,10 +50,10 @@ const messages = defineMessages({
   },
   label: {
     id: 'src.components.CaseSelector.label',
-    defaultMessage: 'label',
+    defaultMessage: 'Select case',
   },
   placeholder: {
     id: 'src.components.CaseSelector.placeholder',
-    defaultMessage: 'placeholder',
+    defaultMessage: 'Choose data',
   },
 });
