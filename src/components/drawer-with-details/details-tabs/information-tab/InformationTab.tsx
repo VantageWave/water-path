@@ -63,9 +63,9 @@ const InformationTab = ({ level }: InformationTabProps) => {
     }, 1000);
   };
 
-  useEffect(() => loadPlace(), [dataCase]);
+  useEffect(() => loadPlace(), [dataCase, lang]);
 
-  useEffect(() => loadAnalysis(), [level, dataCase]);
+  useEffect(() => loadAnalysis(), [level, dataCase, lang]);
 
   return (
     <ScrollShadow
