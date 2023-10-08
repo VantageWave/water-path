@@ -32,9 +32,9 @@ export const HomePage = () => {
         >
             {!animated ? <WaterLoader /> : (
                 <div className='waterContainer'>
-                    <img src="placeholders/arrow.png" className='absolute left-12' />
+                    <img src="placeholders/arrow.png" className='absolute left-[5%] top-[10%]' />
                     <Cloud
-                        classname='left-[22%] top-[35%]'
+                        classname='left-[20%] top-[35%]'
                         content={formatMessage(messages.cloud1Content)}
                         title={formatMessage(messages.cloud1Title)}
                     />

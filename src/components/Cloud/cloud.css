@@ -17,7 +17,7 @@ body {
     height: 110px;
     border-radius: 150px;	
     box-shadow: 10px 10px rgba(255,255,255,0.2);
-    animation: move 2.5s infinite;
+    animation: move 1.5s infinite;
     scale: 1.1;
     font-family: 'Caveat', cursive;
     font-family: 'Open Sans', sans-serif;
