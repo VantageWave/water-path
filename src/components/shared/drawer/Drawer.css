@@ -4,7 +4,7 @@
 }
 
 .drawer {
-  background-color: hsl(var(--nextui-foreground-50));
+  background-color: #46a1de;
   width: var(--drawer-width);
   height: 100%;
   position: fixed;
