@@ -5,7 +5,7 @@ export interface DataTabProps {
 }
 
 export interface DataCaseStructured {
-  [key: `case-${number}`]: DataContent;
+  [key: `case-${number}-${string}`]: DataContent;
 }
 
 export interface DataContent {

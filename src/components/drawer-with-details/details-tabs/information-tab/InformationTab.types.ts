@@ -5,7 +5,7 @@ export interface InformationTabProps {
 }
 
 export interface InformationCaseStructured {
-  [key: `case-${number}`]: InformationContent;
+  [key: `case-${number}-${string}`]: InformationContent;
 }
 
 export interface InformationContent {

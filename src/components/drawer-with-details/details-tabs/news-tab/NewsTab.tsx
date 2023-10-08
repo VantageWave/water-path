@@ -13,6 +13,8 @@ const NewsTab = ({ level }: NewsTabProps) => {
     state: { case: dataCase },
   } = useContext(DataContext);
 
+  const { state } = useContext(DataContext);
+
   const [newsLoaded, setNewsLoaded] = useState(false);
   const [summaryLoaded, setSummaryLoaded] = useState(false);
 
@@ -32,7 +34,8 @@ const NewsTab = ({ level }: NewsTabProps) => {
     setNewsLoaded(false);
 
     setTimeout(() => {
-      const { news } = caseInformation[`case-${dataCase ?? 1}`];
+      const { news } =
+        caseInformation[`case-${dataCase ?? 1}-${state.lang.toString()}`];
 
       setNews(news);
       setNewsLoaded(true);
@@ -43,16 +46,18 @@ const NewsTab = ({ level }: NewsTabProps) => {
     setSummaryLoaded(false);
 
     setTimeout(() => {
-      const summary = caseInformation[`case-${dataCase ?? 1}`].summary[level];
+      const summary =
+        caseInformation[`case-${dataCase ?? 1}-${state.lang.toString()}`]
+          .summary[level];
 
       setSummary(summary);
       setSummaryLoaded(true);
     }, 1000);
   };
 
-  useEffect(() => loadNews(), [dataCase]);
+  useEffect(() => loadNews(), [dataCase, state]);
 
-  useEffect(() => loadSummary(), [dataCase, level]);
+  useEffect(() => loadSummary(), [dataCase, level, state]);
 
   return (
     <ScrollShadow className="max-h-[calc(100%_-_60px)]">

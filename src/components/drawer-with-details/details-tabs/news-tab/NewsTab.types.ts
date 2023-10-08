@@ -5,7 +5,7 @@ export interface NewsTabProps {
 }
 
 export interface NewsCaseStructured {
-  [key: `case-${number}`]: NewsContent;
+  [key: `case-${number}-${string}`]: NewsContent;
 }
 
 export interface NewsContent {

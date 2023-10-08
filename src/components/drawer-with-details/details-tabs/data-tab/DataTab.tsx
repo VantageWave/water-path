@@ -10,6 +10,8 @@ const DataTab = ({ level }: DataTabProps) => {
     state: { case: dataCase },
   } = useContext(DataContext);
 
+  const { state } = useContext(DataContext);
+
   const [sourceLoaded, setSourceLoaded] = useState(false);
   const [summaryLoaded, setSummaryLoaded] = useState(false);
 
@@ -29,7 +31,10 @@ const DataTab = ({ level }: DataTabProps) => {
     setSourceLoaded(false);
 
     setTimeout(() => {
-      setSource(caseInformation[`case-${dataCase ?? 1}`].source);
+      setSource(
+        caseInformation[`case-${dataCase ?? 1}-${state.lang.toString()}`]
+          .source,
+      );
       setSourceLoaded(true);
     }, 1000);
   };
@@ -38,16 +43,18 @@ const DataTab = ({ level }: DataTabProps) => {
     setSummaryLoaded(false);
 
     setTimeout(() => {
-      const summary = caseInformation[`case-${dataCase ?? 1}`].summary[level];
+      const summary =
+        caseInformation[`case-${dataCase ?? 1}-${state.lang.toString()}`]
+          .summary[level];
 
       setSummary(summary);
       setSummaryLoaded(true);
     }, 1000);
   };
 
-  useEffect(() => loadSource(), [dataCase]);
+  useEffect(() => loadSource(), [dataCase, state]);
 
-  useEffect(() => loadSummary(), [level, dataCase]);
+  useEffect(() => loadSummary(), [level, dataCase, state]);
 
   const { formatMessage } = useIntl();
 

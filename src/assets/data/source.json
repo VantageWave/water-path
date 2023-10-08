@@ -1,5 +1,5 @@
 {
-  "case-1": {
+  "case-1-en": {
     "source": {
       "name": "Sentinel",
       "launchYear": "2017",
@@ -11,7 +11,19 @@
       "9-12": "Sentinel-2B is a satellite in the European Space Agency's Copernicus program. It collects detailed optical imagery of the Earth's surface using a MultiSpectral Instrument (MSI) with 13 spectral bands. The satellite follows a sun-synchronous orbit, capturing data as it passes over different regions. This data is used for applications such as environmental monitoring, land cover classification, and disaster management. Sentinel-2B's high-resolution, multi-spectral capabilities make it valuable for Earth observation."
     }
   },
-  "case-2": {
+  "case-1-pl": {
+    "source": {
+      "name": "Sentinel",
+      "launchYear": "2017",
+      "imageUrl": "https://static.wirtualnemedia.pl/media/top/airbus-sentinel2b.jpg"
+    },
+    "summary": {
+      "k-5": "Sentinel-2B to kamera kosmiczna, która robi świetne zdjęcia naszej Ziemi. Okrąża naszą planetę i fotografuje ją z kosmosu. Naukowcy używają tych zdjęć do badania natury i miast. Jest także pomocna, gdy pojawiają się duże problemy. Kamera potrafi widzieć wiele kolorów, podobnie jak tęcza, co sprawia, że jest naprawdę dobra w swojej roli!",
+      "6-8": "Sentinel-2B to kosmiczna kamera, która robi fantastyczne zdjęcia Ziemi. Okrąża naszą planetę, fotografując ją z kosmosu. Te zdjęcia pomagają naukowcom dowiedzieć się więcej o naszym środowisku, takim jak lasy i miasta. Może także pomóc w przypadku katastrof. Kamera Sentinel-2B jest wyjątkowo dobra w robieniu zdjęć w wielu kolorach, podobnych do tęczy, co sprawia, że jest dodatkowo przydatna.",
+      "9-12": "Sentinel-2B to satelita w ramach programu Copernicus Europejskiej Agencji Kosmicznej. Zbiera szczegółowe obrazy optyczne powierzchni Ziemi, korzystając z instrumentu multispektralnego (MSI) z 13 pasmami spektralnymi. Satelita podąża za orbitą o stałym położeniu względem słońca, zbierając dane, gdy przelatuje nad różnymi regionami. Te dane są wykorzystywane do celów monitoringu środowiskowego, klasyfikacji pokrycia terenu i zarządzania sytuacjami kryzysowymi. Wysoka rozdzielczość i możliwości multispektralne Sentinel-2B czynią go cennym narzędziem do obserwacji Ziemi."
+    }
+  },
+  "case-2-en": {
     "source": {
       "name": "Landsat 8, 9",
       "launchYear": "2013, 2021",
@@ -21,6 +33,18 @@
       "k-5": "Landsat 8 and Landsat 9 are like special satellites that take pictures of our Earth. They're run by NASA and a group called the U.S. Geological Survey (USGS).\nThey have super cameras that take pictures of the Earth's surface. These cameras can see different kinds of light, like colors and even light we can't see. These satellites go around the Earth, taking pictures of the same places every 16 days. This helps scientists see how things change, like if forests are disappearing or cities are getting bigger.\nWhy do they do it? Because the pictures they take are super important! They help scientists learn about our Earth, like how we use land and what's happening in nature. They even help when there are big problems like floods or fires.\nLandsat 9 is the newer one, and it's even better at taking pictures. So, Landsat 8 and Landsat 9 are like space cameras that help us understand our Earth and take care of it better.",
       "6-8": "Landsat 8 and Landsat 9 are like high-tech cameras in space. They're run by NASA and the U.S. Geological Survey (USGS). These satellites take pictures of Earth's surface using special sensors.\nThey work by measuring sunlight bouncing off Earth. These sensors can \"see\" in different types of light, like the colors we see and even light we can't see, like infrared.\nLandsat 8 and 9 fly around Earth in a big circle, and every 16 days, they take pictures of the same places. This helps scientists watch how things change, like when forests get smaller or cities get bigger.\nThese pictures are super useful. They help scientists study Earth, like how we use land, how forests are doing, and even when there are problems like floods or fires.\nLandsat 9 is the newer and fancier version of Landsat 8, with better technology for taking even clearer pictures.\nSo, Landsat 8 and Landsat 9 are like space cameras helping us understand and take care of our planet.",
       "9-12": "Landsat 8 and Landsat 9 are Earth-observing satellites operated by NASA and the U.S. Geological Survey (USGS). They collect data by capturing images of the Earth's surface using specialized sensors.\nThese satellites use a method called remote sensing, where they measure the sunlight reflected off the Earth. They have different sensors that can \"see\" in various parts of the electromagnetic spectrum, including visible light and infrared. Landsat 8 and 9 orbit the Earth, passing over the same areas every 16 days. This frequent revisit time allows them to monitor changes over time, such as deforestation, urban growth, and natural disasters.\nThe data collected by Landsat satellites is crucial for a wide range of applications, including land use planning, agriculture, forestry management, and environmental monitoring. Landsat 9, being the more recent addition, brings advanced technology and improved capabilities to continue this important mission of Earth observation and data collection."
+    }
+  },
+  "case-2-pl": {
+    "source": {
+      "name": "Landsat 8, 9",
+      "launchYear": "2013, 2021",
+      "imageUrl": "https://space.skyrocket.de/img_sat/landsat-8__1.jpg"
+    },
+    "summary": {
+      "k-5": "Landsat 8 i Landsat 9 to jakby specjalne satelity, które robią zdjęcia naszej Ziemi. Są obsługiwane przez NASA i grupę o nazwie United States Geological Survey (USGS).\nMają super kamery, które robią zdjęcia powierzchni Ziemi. Te kamery potrafią widzieć różne rodzaje światła, jak kolory, a nawet światło, którego my nie widzimy. Te satelity okrążają Ziemię, robiąc zdjęcia tych samych miejsc co 16 dni. To pomaga naukowcom widzieć, jak zmieniają się rzeczy, na przykład czy lasy znikają lub miasta rosną.\nDlaczego to robią? Bo zdjęcia, które robią, są super ważne! Pomagają naukowcom dowiedzieć się o naszej Ziemi, jak używamy ziemi i co się dzieje w przyrodzie. Nawet pomagają, gdy pojawiają się duże problemy, jak powodzie czy pożary.\nLandsat 9 to nowszy model, i jest jeszcze lepszy w robieniu zdjęć. Tak więc, Landsat 8 i Landsat 9 to jakby kosmiczne kamery, które pomagają nam lepiej rozumieć naszą Ziemię i lepiej się nią opiekować.",
+      "6-8": "Landsat 8 i Landsat 9 to jakby zaawansowane kamery w kosmosie. Są prowadzone przez NASA oraz United States Geological Survey (USGS). Te satelity robią zdjęcia powierzchni Ziemi za pomocą specjalnych czujników.\nDziałają one poprzez pomiar światła słonecznego odbijającego się od Ziemi. Te czujniki potrafią 'widzieć' różne rodzaje światła, takie jak kolory, które widzimy, a nawet światło, którego nie widzimy, jak na przykład podczerwień.\nLandsat 8 i 9 krążą wokół Ziemi w dużym okręgu, i co 16 dni robią zdjęcia tych samych miejsc. To pomaga naukowcom obserwować, jak zmieniają się rzeczy, na przykład, gdy lasy stają się mniejsze lub miasta większe.\nTe zdjęcia są bardzo przydatne. Pomagają naukowcom badać Ziemię, na przykład, jak używamy ziemi, jak radzą sobie lasy, a nawet w przypadku wystąpienia problemów, takich jak powodzie czy pożary.\nLandsat 9 to nowsza i bardziej zaawansowana wersja Landsat 8, z lepszą technologią do robienia jeszcze wyraźniejszych zdjęć.\nTak więc, Landsat 8 i Landsat 9 to jakby kosmiczne kamery, które pomagają nam zrozumieć i dbać o naszą planetę.",
+      "9-12": "Landsat 8 i Landsat 9 to satelity obserwujące Ziemię, działające pod egidą NASA i United States Geological Survey (USGS). Zbierają dane, rejestrując obrazy powierzchni Ziemi za pomocą specjalistycznych czujników.\nTe satelity wykorzystują metodę zwana teledetekcją, gdzie mierzą światło słoneczne odbijające się od powierzchni Ziemi. Posiadają różne czujniki, które potrafią 'widzieć' w różnych częściach widma elektromagnetycznego, włączając w to światło widzialne i podczerwień. Landsat 8 i 9 okrążają Ziemię, przechodząc nad tymi samymi obszarami co 16 dni. Ta częsta powtarzalność pozwala na monitorowanie zmian w czasie, takich jak wylesianie, wzrost miast i katastrofy naturalne.\nDane zebrane przez satelity Landsat są niezwykle istotne dla wielu dziedzin, w tym planowania zagospodarowania przestrzennego, rolnictwa, zarządzania lasami i monitorowania środowiska. Landsat 9, jako nowsza wersja, wprowadza zaawansowaną technologię i ulepszone możliwości, aby kontynuować tę ważną misję obserwacji i zbierania danych na temat Ziemi."
     }
   }
 }
