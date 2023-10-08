@@ -21,12 +21,10 @@ const ImageComparator = () => {
       <ReactCompareImage
         leftImage={startData?.filename || ''}
         rightImage={endData?.filename || ''}
-        leftImageLabel={`${startData?.metadata.area || '0'} ${
-          startData?.metadata.unit || 'km'
-        }`}
-        rightImageLabel={`${endData?.metadata.area || '0'} ${
-          endData?.metadata.unit || 'km'
-        }`}
+        leftImageLabel={`${state.lang === 'en' ? ((startData?.metadata.area || 0) / (1.60934 * 1.60934)).toFixed(4) : (startData?.metadata.area || '0')} ${state.lang === 'en' ? 'mi' : (endData?.metadata.unit || 'km')
+          }`}
+        rightImageLabel={`${state.lang === 'en' ? ((endData?.metadata.area || 0) / (1.60934 * 1.60934)).toFixed(4) : (endData?.metadata.area || '0')} ${state.lang === 'en' ? 'mi' : (endData?.metadata.unit || 'km')
+          }`}
         leftLabelClass="rounded-md"
         rightLabelClass="rounded-md"
       />
