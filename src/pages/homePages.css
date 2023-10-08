@@ -73,7 +73,6 @@
     margin: 0 auto;
     left: 0;
     right: 0;
-    /* line-height: 100vh; */
     z-index: 2;
     position: absolute;
     bottom: 15px;
@@ -2628,7 +2627,8 @@ button.learn-more .button-text {
     bottom: 0;
     padding: 1.15rem 0;
     margin: 0 0 0 1.85rem;
-    color: #282936;
+    color: #46a1de;
+    opacity: 0.8;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.6;
@@ -2647,6 +2647,7 @@ button:hover .circle .icon.arrow {
 
 button:hover .button-text {
     color: #fff;
+    opacity: 1;
 }
 
 #container {
