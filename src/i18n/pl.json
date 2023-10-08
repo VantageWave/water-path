@@ -15,5 +15,13 @@
   "src.components.drawer-with-details.source": "Źródło",
   "src.components.drawer-with-details.data-tab.year": "Rok uruchomienia",
   "src.components.drawer-with-details.data-tab.name": "Nazwa",
-  "src.components.drawer-with-details.details-tabs.information-tab.name": "Nazwa"
+  "src.components.drawer-with-details.details-tabs.information-tab.name": "Nazwa",
+  "src.pages.HomePage.cloud1Content": "To już nie jest odległy koncept - jego efekty są odczuwalne na całym świecie.",
+  "src.pages.HomePage.cloud1Title": "Globalne ocieplenie",
+  "src.pages.HomePage.cloud2Content": "Jednym z najbardziej palących problemów jest niedobór wody, który dotyka miliony ludzi.",
+  "src.pages.HomePage.cloud2Title": "Niedobór wody",
+  "src.pages.HomePage.cloud3Content": "Satelity pozwalają nam monitorować stan naszej planety w czasie rzeczywistym. Dzięki nim możemy zidentyfikować obszary najbardziej zagrożone suszą.",
+  "src.pages.HomePage.cloud3Title": "Dane satelitarne",
+  "src.pages.HomePage.cloud4Content": "Jest naszą najważniejszą bronią przeciwko zmianom klimatycznym. Dowiedz się więcej, aby zrozumieć skalę tego problemu.",
+  "src.pages.HomePage.cloud4Title": "Edukacja"
 }

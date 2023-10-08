@@ -3,7 +3,6 @@ import ImageComparator from '../components/ImageComparator/ImageComparator';
 import CaseSelector from '../components/CaseSelector/CaseSelector';
 import DrawerWithDetails from '../components/drawer-with-details/DrawerWithDetails';
 import DateSelector from '../components/date-selector/DateSelector';
-import Logo from '../components/logo/Logo';
 import { LanguagePicker } from '../components/LanguagePicker/languagePicker';
 
 export const WaterPage = () => (

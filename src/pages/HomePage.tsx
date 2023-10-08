@@ -5,6 +5,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import "./homePages.css";
 import { LanguagePicker } from '../components/LanguagePicker/languagePicker';
 import Logo from '../components/logo/Logo';
+import { Cloud } from '../components';
 
 export const HomePage = () => {
     const { formatMessage } = useIntl();
@@ -21,6 +22,30 @@ export const HomePage = () => {
             exit={{ x: "100%", opacity: 0 }}
             transition={{ duration: 0.6 }}
         >
+            <img src="placeholders/arrow.png" className='absolute left-[-20px]'/>
+            <Cloud
+                classname='left-[14%] top-[35%]'
+                content={formatMessage(messages.cloud1Content)}
+                title={formatMessage(messages.cloud1Title)}
+            />
+            <div className='top-line' />
+            <Cloud
+                classname='left-[25%] top-[70%]'
+                content={formatMessage(messages.cloud2Content)}
+                title={formatMessage(messages.cloud2Title)}
+            />
+            <Cloud
+                classname='left-[50%] top-[35%]'
+                titleStyles='mt-[-28px] mb-3'
+                content={formatMessage(messages.cloud3Content)}
+                title={formatMessage(messages.cloud3Title)}
+            />
+            <Cloud
+                classname='left-[70%] top-[70%]'
+                titleStyles='mt-[-25px]'
+                content={formatMessage(messages.cloud4Content)}
+                title={formatMessage(messages.cloud4Title)}
+            />
             <LanguagePicker isTop />
             <div id="container">
                 <Link to="/waterPath" className="learn-more">
@@ -45,7 +70,39 @@ export const HomePage = () => {
 
 const messages = defineMessages({
     explore: {
-      id: 'src.pages.HomePage.explore',
-      defaultMessage: 'Explore',
+        id: 'src.pages.HomePage.explore',
+        defaultMessage: 'EXPLORE',
     },
-  });
+    cloud1Title: {
+        id: 'src.pages.HomePage.cloud1Title',
+        defaultMessage: 'Global warming',
+    },
+    cloud1Content: {
+        id: 'src.pages.HomePage.cloud1Content',
+        defaultMessage: 'Is no longer a distant concept - its effects are felt worldwide.',
+    },
+    cloud2Title: {
+        id: 'src.pages.HomePage.cloud2Title',
+        defaultMessage: 'Water scarcity',
+    },
+    cloud2Content: {
+        id: 'src.pages.HomePage.cloud2Content',
+        defaultMessage: 'One of the most pressing issues is the water shortage, affecting millions of people.',
+    },
+    cloud3Title: {
+        id: 'src.pages.HomePage.cloud3Title',
+        defaultMessage: 'Satellite data',
+    },
+    cloud3Content: {
+        id: 'src.pages.HomePage.cloud3Content',
+        defaultMessage: 'Satellites allow us to monitor the state of our planet in real-time. Through them, we can identify areas most at risk of drought.',
+    },
+    cloud4Title: {
+        id: 'src.pages.HomePage.cloud4Title',
+        defaultMessage: 'Education',
+    },
+    cloud4Content: {
+        id: 'src.pages.HomePage.cloud4Content',
+        defaultMessage: 'Is our most important weapon against climate change. Learn more to grasp the magnitude of the issue.',
+    },
+});

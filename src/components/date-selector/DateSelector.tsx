@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   Card,
   Dropdown,
@@ -10,14 +10,11 @@ import {
 } from '@nextui-org/react';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import { defineMessages, useIntl } from 'react-intl';
 
 import { DateSelectorProps, dateSelector } from './DateSelector.types';
-import { useContext, useState } from 'react';
-
 import allData from '../../assets/data';
-
 import { ActionType, DataContext } from '../../context';
-import { defineMessages, useIntl } from 'react-intl';
 
 const DropdownSelector = ({
   text,
@@ -89,7 +86,7 @@ const DateSelector = ({ className }: DateSelectorProps) => {
   const { formatMessage } = useIntl();
 
   return (
-    <Card className={`${className} dark:bg-foreground-100/80 px-0 py-1`}>
+    <Card className={`${className} dark:bg-foreground-100/80 px-2 py-1`}>
       <CardBody className="p-0">
         <div className="items-center justify-center gap-2">
           <DropdownSelector

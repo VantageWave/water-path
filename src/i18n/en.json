@@ -1,5 +1,5 @@
 {
-  "src.components.CaseSelector.label": "Select case",
+  "src.components.CaseSelector.label": "label",
   "src.components.CaseSelector.lake1": "Wilczyńskie Lake",
   "src.components.CaseSelector.lake2": "Chad Lake",
   "src.components.CaseSelector.placeholder": "placeholder",
@@ -8,12 +8,20 @@
   "src.components.CompareImage.selectStartDate": "Select start date",
   "src.components.date-selector.endDate": "End date",
   "src.components.date-selector.startDate": "Start date",
+  "src.components.drawer-with-details.data-tab.name": "Name",
+  "src.components.drawer-with-details.data-tab.year": "Launch year",
   "src.components.drawer-with-details.details-tabs.information-tab.location": "Location",
-  "src.pages.HomePage.explore": "EXPLORE",
+  "src.components.drawer-with-details.details-tabs.information-tab.name": "Name",
   "src.components.drawer-with-details.information": "Information",
   "src.components.drawer-with-details.news": "News",
   "src.components.drawer-with-details.source": "Source",
-  "src.components.drawer-with-details.data-tab.year": "Launch year",
-  "src.components.drawer-with-details.data-tab.name": "Name",
-  "src.components.drawer-with-details.details-tabs.information-tab.name": "Name"
+  "src.pages.HomePage.cloud1Content": "Is no longer a distant concept - its effects are felt worldwide.",
+  "src.pages.HomePage.cloud1Title": "Global warming",
+  "src.pages.HomePage.cloud2Content": "One of the most pressing issues is the water shortage, affecting millions of people.",
+  "src.pages.HomePage.cloud2Title": "Water scarcity",
+  "src.pages.HomePage.cloud3Content": "Satellites allow us to monitor the state of our planet in real-time. Through them, we can identify areas most at risk of drought.",
+  "src.pages.HomePage.cloud3Title": "Satellite data",
+  "src.pages.HomePage.cloud4Content": "Is our most important weapon against climate change. Learn more to grasp the magnitude of the issue.",
+  "src.pages.HomePage.cloud4Title": "Education",
+  "src.pages.HomePage.explore": "EXPLORE"
 }
