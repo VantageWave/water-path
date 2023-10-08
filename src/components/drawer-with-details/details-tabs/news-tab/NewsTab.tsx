@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo, useState } from 'react';
+import { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { DataContext } from '../../../../context';
 import type {
   NewsCaseStructured,
@@ -7,6 +7,7 @@ import type {
 } from './NewsTab.types';
 import newsCases from '../../../../assets/data/news.json';
 import { Card, ScrollShadow, Skeleton } from '@nextui-org/react';
+import { useContainerScrolledDown } from '../../../../hooks/useContainerScrolledDown';
 
 const NewsTab = ({ level }: NewsTabProps) => {
   const {
@@ -20,6 +21,10 @@ const NewsTab = ({ level }: NewsTabProps) => {
 
   const [news, setNews] = useState<NewsItem[]>([]);
   const [summary, setSummary] = useState<string>('');
+
+  const scrollShadowRef = useRef<HTMLElement | null>(null);
+
+  const [scrolledDown] = useContainerScrolledDown(scrollShadowRef);
 
   const typeToNewsCaseStructured = (json: unknown): NewsCaseStructured => {
     return json as NewsCaseStructured;
@@ -60,7 +65,11 @@ const NewsTab = ({ level }: NewsTabProps) => {
   useEffect(() => loadSummary(), [dataCase, level, state]);
 
   return (
-    <ScrollShadow className="max-h-[calc(100%_-_60px)]">
+    <ScrollShadow
+      ref={scrollShadowRef}
+      isEnabled={!scrolledDown}
+      className="px-[16px] max-h-[calc(100%_-_120px)]"
+    >
       <div className="flex flex-col gap-3">
         {newsLoaded
           ? news.map((newsItem) => (
