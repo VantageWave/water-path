@@ -32,26 +32,26 @@ export const HomePage = () => {
         >
             {!animated ? <WaterLoader /> : (
                 <div className='waterContainer'>
-                    <img src="placeholders/arrow.png" className='absolute left-[-20px]' />
+                    <img src="placeholders/arrow.png" className='absolute left-12' />
                     <Cloud
-                        classname='left-[14%] top-[35%]'
+                        classname='left-[22%] top-[35%]'
                         content={formatMessage(messages.cloud1Content)}
                         title={formatMessage(messages.cloud1Title)}
                     />
                     <div className='top-line' />
                     <Cloud
-                        classname='left-[25%] top-[70%]'
+                        classname='left-[33%] top-[70%]'
                         content={formatMessage(messages.cloud2Content)}
                         title={formatMessage(messages.cloud2Title)}
                     />
                     <Cloud
-                        classname='left-[50%] top-[35%]'
+                        classname='left-[58%] top-[35%]'
                         titleStyles='mt-[-28px] mb-3'
                         content={formatMessage(messages.cloud3Content)}
                         title={formatMessage(messages.cloud3Title)}
                     />
                     <Cloud
-                        classname='left-[70%] top-[70%]'
+                        classname='left-[78%] top-[70%]'
                         titleStyles='mt-[-25px]'
                         content={formatMessage(messages.cloud4Content)}
                         title={formatMessage(messages.cloud4Title)}
