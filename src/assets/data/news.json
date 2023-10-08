@@ -1,5 +1,5 @@
 {
-  "case-1": {
+  "case-1-en": {
     "news": [
       {
         "title": "The Fight for Water in the Heart of Poland. \"It's Better to Be Careful About What You Pray For...\"",
@@ -44,38 +44,121 @@
       "9-12": "The Gnieźnieńskie and Kujawskie Lake Districts have been grappling with drought for decades. This is the result of climate change, reduced rainfall, but also the impact of mining on groundwater levels. In particular, the region has been affected by the activities of local open-pit lignite coal mines, which have lowered groundwater sources, resulting in the outflow of water from the lakes and rivers in the area. Despite the efforts of environmentalists and the intervention of the European Commission, legal processes related to the mining activities have dragged on for years without a clear resolution. Authorities and residents of the region fear that before these disputes are settled, the well-known lake zone may completely dry up."
     }
   },
-  "case-2": {
-    "news": [{
-      "title": "Nigerian Embassy in Chad donates relief materials to Baga Sola refugee camp to mark 63rd Independence Anniversary",
-      "link": "https://www.vanguardngr.com/2023/10/nigerian-embassy-in-chad-donates-relief-materials-to-baga-sola-refugee-camp-to-mark-63rd-independence-anniversary/",
-      "snippet": "... water resources, in a sustainable and equitable way, as well as promote ... Lake Chad region. The initiative may not solve all their problems...",
-      "date": "1 day ago",
-      "source": "Vanguard News",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiwtqsJBLgVFG3g2BjBc3LwmOyJ3OCMEJKAWhHA_J4M9iu1VGutXBkwmLpOg&s",
-      "position": 1
-    },
-    {
-      "title": "Climate-fueled Violence and Displacement in the Lake Chad Basin ...",
-      "link": "https://www.refugeesinternational.org/reports-briefs/climate-fueled-violence-and-displacement-in-the-lake-chad-basin-focus-on-chad-and-cameroon/",
-      "snippet": "... problems of Lake Chad Basin. At present, the Commission is ... Cover Photo: A Chadian boy fills a bucket with water from the Lake Chad on November...",
-      "date": "8 months ago",
-      "source": "Refugees International",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNpgtmmlmx5wHq0pdZoTWngNVxTViUeUnlAUM4lyrf9ck4OhrDyibItv9NoQ&s",
-      "position": 2
-    },
-    {
-      "title": "The Lake Chad Basin is a security nightmare. 5 guidelines for ...",
-      "link": "https://theconversation.com/the-lake-chad-basin-is-a-security-nightmare-5-guidelines-for-finding-solutions-199991",
-      "snippet": "Lake Chad, the primary source of water in the region, has shrunk significantly due to drought since the 1960s. In 2022, the region was hit...",
-      "date": "7 months ago",
-      "source": "The Conversation",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnyrvfYDxlBWFC-Js1XtWSWDG1T744NQRDWXRB_QJPYSsqjzRzAfqVqQdJKQ&s",
-      "position": 3
-    }],
+  "case-1-pl": {
+    "news": [
+      {
+        "title": "Walka o wodę w kolebce Polski. \"Lepiej uważać, o co się człowiek modli\"",
+        "link": "https://www.money.pl/gospodarka/walka-o-wode-w-kolebce-polski-lepiej-uwazac-o-co-sie-czlowiek-modli-6918505756670816a.html",
+        "snippet": "Kopalnia Konin kończy swoją zmianę. Firma uważa, że takie rozwiązanie jest dla niej łatwiejsze... Na razie mieszkańcy regionu patrzą na wysychające jeziora z niedowierzaniem...",
+        "date": "2 miesiące temu",
+        "source": "Money.pl",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSop9Ur9givZyTtO1LcT5KAJsB2wqtvDBIft1mFY0p90QnLzZWjUFJTIYZILQ&s",
+        "position": 1
+      },
+      {
+        "title": "Pojezierze Gnieźnieńskie coraz bardziej suche. Z roku na rok jezior jest mniej",
+        "link": "https://www.money.pl/gospodarka/pojezierze-gnieznienskie-coraz-bardziej-suche-z-roku-na-rok-jezior-jest-mniej-6389042188839041a.html",
+        "snippet": "Pojezierze Gnieźnieńskie wysycha. Nowa kopalnia. Według ekologów głównym winowajcą wysychania jezior jest Kopalnia Konin, która wydobywa...",
+        "date": "52 miesiące temu",
+        "source": "Money.pl",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9-jAmU32JGFujIlW00PaSRjenrxknxOSFH9p-ihjBtoRPVuq--AJufjzWzw&s",
+        "position": 2
+      },
+      {
+        "title": "Jezioro wysycha w tempie 10 cm na tydzień! Kopalnia nie chce przyznać, że to w związku z jej działalnością",
+        "link": "https://poznan.wyborcza.pl/poznan/7,36001,25091107,rozwoj-tak-odkrywki-nie-nie-otwierac-nowych-nie-poszerzac.html",
+        "snippet": "Mieszkańcy oraz przedstawiciele lokalnych władz z pobliskich gmin protestowali we wtorek przed siedzibą Kopalni Węgla Brunatnego w Kleczewie.",
+        "date": "49 miesięcy temu",
+        "source": "poznan.wyborcza.pl",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmIjpXttyXfbgIPU4i4CVDthjDXRE-LlznPDgjt9p1h9femKDqR-neQ4E7-w&s",
+        "position": 3
+      },
+      {
+        "title": "Ministerstwo Wypowiada Się na Temat Kopalni \"Konin\". \"Nie Ma...\"",
+        "link": "https://www.money.pl/gospodarka/wiadomosci/artykul/ministerstwo-zabiera-glos-w-sprawie-kopalni,121,0,2409081.html",
+        "snippet": "Jeziora wysychają, a walka z kopalnią, której ekolodzy zarzucają szkodzenie środowisku, trwa już prawie 10 lat.",
+        "date": "63 miesiące temu",
+        "source": "Money.pl",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_zEtDpWIqfr4eLOs1jkL4zP1wxS7uEzP8fTA2j3evRmx3x410PO_GNbhyBw&s",
+        "position": 4
+      }
+    ],
+    "summary": {
+      "k-5": "Wyobraź sobie duże, piękne jeziora, w których można się kąpać, pływać łodzią albo po prostu siedzieć na plaży. Ale te jeziora w Polsce, na obszarze Pojezierza Gnieźnieńskiego i Kujawskiego, zaczynają mieć coraz mniej wody. Możesz zgadnąć dlaczego? Pewnie wiesz, że jeziora dostają wodę od deszczu. Ale ostatnio pada mniej deszczu, więc mniej wody trafia do jezior. Poza tym w pobliżu tych jezior są duże kopalnie. Kopalnie to miejsca, gdzie ludzie kopią w ziemi, żeby znaleźć węgiel, który jest używany do produkcji elektryczności. Kiedy kopią duże dziury w ziemi, woda z jeziora \"ucieka\" do tych dziur, i dlatego jest mniej wody. Ludzie, którzy dbają o przyrodę, próbują powstrzymać kopalnie przed robieniem tych dużych dziur, ale to jest trudne i trwa to wiele czasu. W międzyczasie martwimy się, że nasze piękne jeziora mogą całkowicie wyschnąć, zanim te problemy zostaną rozwiązane.",
+      "6-8": "Jeziora w naszym kraju, na obszarze Pojezierza Gnieźnieńskiego i Kujawskiego, od dłuższego czasu borykają się z poważnym problemem, ponieważ coraz bardziej wysychają. To dzieje się dlatego, że mamy mniej deszczu, jest coraz cieplej, a także z powodu działalności górniczej. W tych kopalniach kopią się duże dziury w ziemi, żeby pozyskać węgiel. Przez te dziury woda z jezior i rzek \"ucieka\" do ziemi, dlatego jeziora mają coraz mniej wody. Ekolodzy, czyli osoby dbające o ochronę środowiska, sprzeciwiają się temu i walczą w sądach, żeby zatrzymać to, co robią kopalnie. Niestety te spory prawne trwają bardzo długo, i nie wiemy, kiedy się zakończą. W międzyczasie jeziora mogą całkowicie wyschnąć, zanim znajdzie się rozwiązanie, co jest bardzo smutne zarówno dla mieszkańców tych okolic, jak i dla turystów, którzy przyjeżdżają na wakacje.",
+      "9-12": "Obszar Pojezierza Gnieźnieńskiego i Kujawskiego od dziesięcioleci zmaga się z suszą. Jest to efektem zmian klimatycznych, zmniejszonej ilości opadów deszczu, ale także wpływu działalności górniczej na poziom wód gruntowych. Szczególnie dotknięty region jest działalnością lokalnych kopalni odkrywkowych węgla brunatnego, które obniżyły poziom wód gruntowych, co spowodowało odpływ wody z jezior i rzek na tym terenie. Pomimo wysiłków ekologów i interwencji Komisji Europejskiej, procesy prawne związane z działalnością górniczą ciągną się latami bez wyraźnego rozwiązania. Władze i mieszkańcy regionu obawiają się, że zanim spory te zostaną rozwiązane, dobrze znany obszar jezior może całkowicie wyschnąć."
+    }
+  },
+  "case-2-en": {
+    "news": [
+      {
+        "title": "Nigerian Embassy in Chad donates relief materials to Baga Sola refugee camp to mark 63rd Independence Anniversary",
+        "link": "https://www.vanguardngr.com/2023/10/nigerian-embassy-in-chad-donates-relief-materials-to-baga-sola-refugee-camp-to-mark-63rd-independence-anniversary/",
+        "snippet": "... water resources, in a sustainable and equitable way, as well as promote ... Lake Chad region. The initiative may not solve all their problems...",
+        "date": "1 day ago",
+        "source": "Vanguard News",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiwtqsJBLgVFG3g2BjBc3LwmOyJ3OCMEJKAWhHA_J4M9iu1VGutXBkwmLpOg&s",
+        "position": 1
+      },
+      {
+        "title": "Climate-fueled Violence and Displacement in the Lake Chad Basin ...",
+        "link": "https://www.refugeesinternational.org/reports-briefs/climate-fueled-violence-and-displacement-in-the-lake-chad-basin-focus-on-chad-and-cameroon/",
+        "snippet": "... problems of Lake Chad Basin. At present, the Commission is ... Cover Photo: A Chadian boy fills a bucket with water from the Lake Chad on November...",
+        "date": "8 months ago",
+        "source": "Refugees International",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNpgtmmlmx5wHq0pdZoTWngNVxTViUeUnlAUM4lyrf9ck4OhrDyibItv9NoQ&s",
+        "position": 2
+      },
+      {
+        "title": "The Lake Chad Basin is a security nightmare. 5 guidelines for ...",
+        "link": "https://theconversation.com/the-lake-chad-basin-is-a-security-nightmare-5-guidelines-for-finding-solutions-199991",
+        "snippet": "Lake Chad, the primary source of water in the region, has shrunk significantly due to drought since the 1960s. In 2022, the region was hit...",
+        "date": "7 months ago",
+        "source": "The Conversation",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnyrvfYDxlBWFC-Js1XtWSWDG1T744NQRDWXRB_QJPYSsqjzRzAfqVqQdJKQ&s",
+        "position": 3
+      }
+    ],
     "summary": {
       "k-5": "Imagine if your neighborhood park started to dry up and there wasn't enough water for the plants and trees. Now, imagine if that park was so big that it covered parts of four countries - that's what's happening in a place called the Lake Chad Basin. Because of climate change, there's less water and land for people to use. This has led to fights between different groups who all need these resources to survive and has forced many people to leave their homes. Countries are trying their best to help. For example, Chad, one of the countries, is hosting more than one million people who had to leave their homes. But this is a big challenge and needs a lot of resources. There have been big meetings where leaders talk about how to solve these problems. They agreed that they need to work together, put more money into tackling climate change, and help the people who had to leave their homes. But for things to get better, more help is needed from countries all over the world, and there needs to be even more focus on ways to stop climate change.",
       "6-8": "The Lake Chad Basin is a large area that includes parts of several countries, such as Cameroon, Chad, Niger, and Nigeria. This area is facing major problems because of climate change. Basically, as the weather patterns change, water and land are becoming scarcer which means there's not enough for everyone who lives there. This causes conflicts between communities who are fighting to access these resources. It has also made many people leave their homes, creating a situation where there are many refugees that need help. Countries like Chad are doing their best to support these refugees, but the situation is very challenging, especially because it also affects these countries' resources. There have been meetings and conferences where countries and organizations are trying to find solutions to these problems. They've recognized that they need to work together and put more money and resources into dealing with climate change, violence, and making sure refugees have what they need. However, to really make things better in the Lake Chad Basin, there needs to be more help from the international community and a larger focus on actions that can help combat climate change.",
       "9-12": "The Lake Chad Basin, including Cameroon, Chad, Niger, and Nigeria, is grappling with severe climate change-induced issues, including resource scarcity and forced displacement. Over the past decades, altering climatic conditions have exacerbated competition for critical resources such as land and water, leading to a rise in intercommunal conflict and displacement, particularly evident in areas like Cameroon’s Logone Birni commune. Climate-driven scarcity is not only causing displacement, but it's also contributing to regional instability and violence. This worsening situation is overlaid with the challenges of hosting and supporting displaced populations amidst shrinking resources and regional and national strain. Chad, for example, hosts about 1.1 million displaced persons, a situation that puts a significant burden on the country's resources. Efforts have been made to address this climate-induced crisis, such as the Third High-Level Conference on Lake Chad Basin Region in 2023, where the need to address the link between climate change, violence, and displacement was emphasized. The conference also highlighted the importance of more funds to manage the harmful consequences of climate change, which so far remains critically underfunded. To achieve sustainable solutions and a peaceful future in the Lake Chad Basin, greater international collaboration, financial commitment, and strategic approaches focusing on climate action are urgently needed."
+    }
+  },
+  "case-2-pl": {
+    "news": [
+      {
+        "title": "Nigeryjska Ambasada w Czadzie przekazuje pomoc humanitarną dla obozu uchodźców w Baga Sola z okazji 63. rocznicy Niepodległości",
+        "link": "https://www.vanguardngr.com/2023/10/nigerian-embassy-in-chad-donates-relief-materials-to-baga-sola-refugee-camp-to-mark-63rd-independence-anniversary/",
+        "snippet": "... zasoby wodne w sposób zrównoważony i sprawiedliwy, a także promować... region jeziora Czad. Inicjatywa może nie rozwiązać wszystkich ich problemów...",
+        "date": "1 dzień temu",
+        "source": "Vanguard News",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiwtqsJBLgVFG3g2BjBc3LwmOyJ3OCMEJKAWhHA_J4M9iu1VGutXBkwmLpOg&s",
+        "position": 1
+      },
+      {
+        "title": "Przemoc i Migracje Wywołane Zmianami Klimatycznymi w Basenie Jeziora Czad...",
+        "link": "https://www.refugeesinternational.org/reports-briefs/climate-fueled-violence-and-displacement-in-the-lake-chad-basin-focus-on-chad-and-cameroon/",
+        "snippet": "... problemy związane z Dorzeczem Jeziora Czad. Obecnie Komisja jest... Zdjęcie na okładce: Chadański chłopiec nabiera wodę z Jeziora Czad w listopadzie...",
+        "date": "8 miesięcy temu",
+        "source": "Refugees International",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNpgtmmlmx5wHq0pdZoTWngNVxTViUeUnlAUM4lyrf9ck4OhrDyibItv9NoQ&s",
+        "position": 2
+      },
+      {
+        "title": "Dorzecze Jeziora Czad to koszmar dla bezpieczeństwa. 5 wskazówek dotyczących...",
+        "link": "https://theconversation.com/the-lake-chad-basin-is-a-security-nightmare-5-guidelines-for-finding-solutions-199991",
+        "snippet": "Jezioro Czad, główne źródło wody w regionie, znacząco się skurczyło od lat 60. z powodu suszy. W 2022 roku region został dotknięty...",
+        "date": "7 miesięcy temu",
+        "source": "The Conversation",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnyrvfYDxlBWFC-Js1XtWSWDG1T744NQRDWXRB_QJPYSsqjzRzAfqVqQdJKQ&s",
+        "position": 3
+      }
+    ],
+    "summary": {
+      "k-5": "Wyobraź sobie, że twój ulubiony park w okolicy zaczyna wysychać, i nie ma wystarczająco wody dla roślin i drzew. Teraz wyobraź sobie, że ten park jest tak duży, że obejmuje części czterech krajów - to właśnie dzieje się w miejscu zwanych Dorzeczem Jeziora Czad. Ze względu na zmiany klimatyczne, jest mniej wody i ziemi, którą ludzie mogą używać. To spowodowało walki między różnymi grupami, które wszystkie potrzebują tych zasobów, aby przetrwać, i zmusiło wielu ludzi do opuszczenia swoich domów. Kraje próbują robić wszystko, co w ich mocy, żeby pomóc. Na przykład Czad, jeden z tych krajów, przyjął ponad milion ludzi, którzy musieli opuścić swoje domy. Ale to duże wyzwanie i wymaga dużo zasobów. Odbyły się wielkie spotkania, na których przywódcy rozmawiali o tym, jak rozwiązać te problemy. Zgodzili się, że muszą współpracować, przeznaczyć więcej pieniędzy na walkę ze zmianami klimatycznymi i pomóc ludziom, którzy musieli opuścić swoje domy. Ale żeby rzeczy stały się lepsze, potrzebna jest większa pomoc od krajów z całego świata, i trzeba jeszcze bardziej skupić się na sposobach, żeby zatrzymać zmiany klimatyczne.",
+      "6-8": "Dorzecze Jeziora Czad to duży obszar, który obejmuje części kilku krajów, takich jak Kamerun, Czad, Niger i Nigeria. Ten obszar boryka się z poważnymi problemami związanymi ze zmianami klimatycznymi. W zasadzie, w miarę jak zmieniają się wzorce pogodowe, woda i ziemia stają się coraz rzadsze, co oznacza, że nie starcza dla wszystkich, którzy tam mieszkają. To powoduje konflikty między społecznościami walczącymi o dostęp do tych zasobów. Wielu ludzi musiało opuścić swoje domy, co stworzyło sytuację, w której jest wielu uchodźców, którzy potrzebują pomocy. Kraje, takie jak Czad, robią wszystko, co w ich mocy, żeby wspierać tych uchodźców, ale sytuacja jest bardzo trudna, zwłaszcza dlatego, że wpływa to także na zasoby tych krajów. Odbywały się spotkania i konferencje, na których kraje i organizacje próbują znaleźć rozwiązania tych problemów. Rozpoznali, że muszą współpracować, przeznaczyć więcej pieniędzy i zasobów na radzenie sobie ze zmianami klimatycznymi, przemocą i zapewnienie uchodźcom tego, czego potrzebują. Jednakże, żeby naprawdę poprawić sytuację w Dorzeczu Jeziora Czad, potrzebna jest większa pomoc ze strony społeczności międzynarodowej i większy nacisk na działania, które mogą pomóc w walce ze zmianami klimatycznymi.",
+      "9-12": "Dorzecze Jeziora Czad, obejmujące Kamerun, Czad, Niger i Nigerię, zmaga się z poważnymi problemami wynikającymi ze zmian klimatycznych, w tym z niedoborem zasobów i przymusowymi przemieszczeniami ludności. W ciągu ostatnich dziesięcioleci zmieniające się warunki klimatyczne nasiliły rywalizację o kluczowe zasoby, takie jak ziemia i woda, co doprowadziło do wzrostu konfliktów między wspólnotami i przymusowych przesiedleń, zwłaszcza widocznych w obszarach, takich jak gmina Logone Birni w Kamerunie. Związaną ze zmianami klimatycznymi niemożnością dostępu nie tylko do przymuszych przesiedleń, ale także do pogorszenia się sytuacji regionalnej niestabilności i przemocy. Ten coraz gorszy stan rzeczy jest dodatkowo obciążony wyzwaniami związanymi z przyjmowaniem i wsparciem przesiedleńców w obliczu kurczących się zasobów oraz presji regionalnej i krajowej. Czad, na przykład, gości około 1,1 miliona przesiedleńców, co stwarza znaczące obciążenie dla zasobów tego kraju. Podjęto wysiłki w celu rozwiązania kryzysu spowodowanego zmianami klimatycznymi, takie jak Trzecia Wysokopoziomowa Konferencja Regionu Dorzecza Jeziora Czad w 2023 roku, gdzie podkreślono konieczność rozwiązania związku między zmianami klimatycznymi, przemocą i przesiedleniami. Konferencja podkreśliła także znaczenie większych funduszy na zarządzanie szkodliwymi skutkami zmian klimatycznych, które do tej pory pozostają krytycznie niedofinansowane. Aby osiągnąć trwałe rozwiązania i pokojową przyszłość w Dorzeczu Jeziora Czad, pilnie potrzebna jest większa międzynarodowa współpraca, zaangażowanie finansowe oraz strategiczne podejścia skoncentrowane na działaniach klimatycznych."
     }
   }
 }

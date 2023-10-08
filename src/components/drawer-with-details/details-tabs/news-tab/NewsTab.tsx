@@ -55,9 +55,9 @@ const NewsTab = ({ level }: NewsTabProps) => {
     }, 1000);
   };
 
-  useEffect(() => loadNews(), [dataCase]);
+  useEffect(() => loadNews(), [dataCase, state]);
 
-  useEffect(() => loadSummary(), [dataCase, level]);
+  useEffect(() => loadSummary(), [dataCase, level, state]);
 
   return (
     <ScrollShadow className="max-h-[calc(100%_-_60px)]">
