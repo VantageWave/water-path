@@ -1,10 +1,10 @@
 [
   {
-    "filename": "lake_chad/2014-03-14_Landsat_NDWI.png",
+    "filename": "lake_chad/2023-09-07_Landsat_NDWI.png",
     "date": "2014-03-14",
     "case": "chad_lake",
     "metadata": {
-      "area": 159.0749,
+      "area": 219.0071,
       "unit": "km"
     }
   },
@@ -36,11 +36,11 @@
     }
   },
   {
-    "filename": "lake_chad/2023-09-07_Landsat_NDWI.png",
+    "filename": "lake_chad/2014-03-14_Landsat_NDWI.png",
     "date": "2023-09-07",
     "case": "chad_lake",
     "metadata": {
-      "area": 219.0071,
+      "area": 159.0749,
       "unit": "km"
     }
   }
