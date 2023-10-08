@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   Card,
   Dropdown,
@@ -26,6 +26,10 @@ const DropdownSelector = ({
   const data = allData[state.case];
 
   const { dispatch } = useContext(DataContext);
+
+  useEffect(() => {
+    setSelectedKey(null);
+  }, [state.case]);
 
   return (
     <Dropdown>
