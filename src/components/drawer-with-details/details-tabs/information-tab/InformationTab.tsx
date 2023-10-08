@@ -14,6 +14,8 @@ const InformationTab = ({ level }: InformationTabProps) => {
     state: { case: dataCase },
   } = useContext(DataContext);
 
+  const { state } = useContext(DataContext);
+
   const [placeLoaded, setPlaceLoaded] = useState(false);
   const [analysisLoaded, setAnalysisLoaded] = useState(false);
 
@@ -35,7 +37,10 @@ const InformationTab = ({ level }: InformationTabProps) => {
     setPlaceLoaded(false);
 
     setTimeout(() => {
-      setPlace(caseInformation[`case-${dataCase ?? 1}`].place);
+      console.log(state.lang);
+      setPlace(
+        caseInformation[`case-${dataCase ?? 1}-${state.lang.toString()}`].place,
+      );
       setPlaceLoaded(true);
     }, 1000);
   };
@@ -44,16 +49,18 @@ const InformationTab = ({ level }: InformationTabProps) => {
     setAnalysisLoaded(false);
 
     setTimeout(() => {
-      const analysis = caseInformation[`case-${dataCase ?? 1}`].analysis[level];
+      const analysis =
+        caseInformation[`case-${dataCase ?? 1}-${state.lang.toString()}`]
+          .analysis[level];
 
       setAnalysis(analysis);
       setAnalysisLoaded(true);
     }, 1000);
   };
 
-  useEffect(() => loadPlace(), [dataCase]);
+  useEffect(() => loadPlace(), [dataCase, state]);
 
-  useEffect(() => loadAnalysis(), [level, dataCase]);
+  useEffect(() => loadAnalysis(), [level, dataCase, state]);
 
   const { formatMessage } = useIntl();
 
