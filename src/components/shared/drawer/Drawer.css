@@ -4,7 +4,6 @@
 }
 
 .drawer {
-  background-color: #46a1de;
   width: var(--drawer-width);
   height: 100%;
   position: fixed;
@@ -63,7 +62,7 @@
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-color: hsl(var(--nextui-primary));
+  background-color: #46a1de;
   border-radius: 50%;
   position: fixed;
   z-index: 1000;
