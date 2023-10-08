@@ -1,22 +1,27 @@
-import { useContext, useEffect, useMemo, useState } from 'react';
+import { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { DataCaseStructured, DataSource, DataTabProps } from './DataTab.types';
 import { DataContext } from '../../../../context';
 import dataSource from '../../../../assets/data/source.json';
 import { ScrollShadow, Skeleton } from '@nextui-org/react';
 import { defineMessages, useIntl } from 'react-intl';
+import { useContainerScrolledDown } from '../../../../hooks/useContainerScrolledDown';
 
 const DataTab = ({ level }: DataTabProps) => {
   const {
-    state: { case: dataCase },
+    state: { case: dataCase, lang },
   } = useContext(DataContext);
 
-  const { state } = useContext(DataContext);
+  const { formatMessage } = useIntl();
 
   const [sourceLoaded, setSourceLoaded] = useState(false);
   const [summaryLoaded, setSummaryLoaded] = useState(false);
 
   const [source, setSource] = useState<DataSource | null>(null);
   const [summary, setSummary] = useState<string>('');
+
+  const scrollShadowRef = useRef<HTMLElement | null>(null);
+
+  const [scrolledDown] = useContainerScrolledDown(scrollShadowRef);
 
   const typeToDateCaseStructured = (json: unknown): DataCaseStructured => {
     return json as DataCaseStructured;
@@ -32,8 +37,7 @@ const DataTab = ({ level }: DataTabProps) => {
 
     setTimeout(() => {
       setSource(
-        caseInformation[`case-${dataCase ?? 1}-${state.lang.toString()}`]
-          .source,
+        caseInformation[`case-${dataCase ?? 1}-${lang.toString()}`].source,
       );
       setSourceLoaded(true);
     }, 1000);
@@ -44,22 +48,25 @@ const DataTab = ({ level }: DataTabProps) => {
 
     setTimeout(() => {
       const summary =
-        caseInformation[`case-${dataCase ?? 1}-${state.lang.toString()}`]
-          .summary[level];
+        caseInformation[`case-${dataCase ?? 1}-${lang.toString()}`].summary[
+          level
+        ];
 
       setSummary(summary);
       setSummaryLoaded(true);
     }, 1000);
   };
 
-  useEffect(() => loadSource(), [dataCase, state]);
+  useEffect(() => loadSource(), [dataCase]);
 
-  useEffect(() => loadSummary(), [level, dataCase, state]);
-
-  const { formatMessage } = useIntl();
+  useEffect(() => loadSummary(), [level, dataCase]);
 
   return (
-    <ScrollShadow className="max-h-[calc(100%_-_60px)]">
+    <ScrollShadow
+      ref={scrollShadowRef}
+      isEnabled={!scrolledDown}
+      className="px-[16px] max-h-[calc(100%_-_120px)]"
+    >
       <div className="mb-[24px]">
         <Skeleton isLoaded={sourceLoaded} className="rounded-lg">
           <img

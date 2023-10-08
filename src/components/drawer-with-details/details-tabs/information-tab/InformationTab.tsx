@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo, useState } from 'react';
+import { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { ScrollShadow, Skeleton } from '@nextui-org/react';
 import { DataContext } from '../../../../context';
 import informations from '../../../../assets/data/informations.json';
@@ -8,19 +8,24 @@ import {
   InformationTabProps,
 } from './InformationTab.types';
 import { defineMessages, useIntl } from 'react-intl';
+import { useContainerScrolledDown } from '../../../../hooks/useContainerScrolledDown';
 
 const InformationTab = ({ level }: InformationTabProps) => {
   const {
-    state: { case: dataCase },
+    state: { case: dataCase, lang },
   } = useContext(DataContext);
 
-  const { state } = useContext(DataContext);
+  const { formatMessage } = useIntl();
 
   const [placeLoaded, setPlaceLoaded] = useState(false);
   const [analysisLoaded, setAnalysisLoaded] = useState(false);
 
   const [place, setPlace] = useState<InformationPlace | null>(null);
   const [analysis, setAnalysis] = useState<string>('');
+
+  const scrollShadowRef = useRef<HTMLElement | null>(null);
+
+  const [scrolledDown] = useContainerScrolledDown(scrollShadowRef);
 
   const typeToInformationCaseStructured = (
     json: unknown,
@@ -37,9 +42,8 @@ const InformationTab = ({ level }: InformationTabProps) => {
     setPlaceLoaded(false);
 
     setTimeout(() => {
-      console.log(state.lang);
       setPlace(
-        caseInformation[`case-${dataCase ?? 1}-${state.lang.toString()}`].place,
+        caseInformation[`case-${dataCase ?? 1}-${lang.toString()}`].place,
       );
       setPlaceLoaded(true);
     }, 1000);
@@ -50,22 +54,25 @@ const InformationTab = ({ level }: InformationTabProps) => {
 
     setTimeout(() => {
       const analysis =
-        caseInformation[`case-${dataCase ?? 1}-${state.lang.toString()}`]
-          .analysis[level];
+        caseInformation[`case-${dataCase ?? 1}-${lang.toString()}`].analysis[
+          level
+        ];
 
       setAnalysis(analysis);
       setAnalysisLoaded(true);
     }, 1000);
   };
 
-  useEffect(() => loadPlace(), [dataCase, state]);
+  useEffect(() => loadPlace(), [dataCase]);
 
-  useEffect(() => loadAnalysis(), [level, dataCase, state]);
-
-  const { formatMessage } = useIntl();
+  useEffect(() => loadAnalysis(), [level, dataCase]);
 
   return (
-    <ScrollShadow className="max-h-[calc(100%_-_60px)]">
+    <ScrollShadow
+      ref={scrollShadowRef}
+      isEnabled={!scrolledDown}
+      className="px-[16px] max-h-[calc(100%_-_120px)]"
+    >
       <div className="mb-[24px]">
         <Skeleton isLoaded={placeLoaded} className="rounded-lg">
           <img

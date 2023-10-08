@@ -8,8 +8,8 @@ const DrawerWithDetails = () => {
   const [level, setLevel] = useState<EducationLevel>(EducationLevel.ELEMENTARY);
 
   return (
-    <Drawer position="right" className="p-5" enableToggle>
-      <DetailsTabs level={level} />
+    <Drawer position="right" enableToggle>
+      <DetailsTabs level={level} className="px-5 pt-5" />
 
       <footer className="flex justify-center bg-foreground-50 w-full absolute bottom-0 py-2 left-1/2 transform -translate-x-1/2">
         <SchoolGradeSwitcher level={level} setLevel={setLevel} />
