@@ -32,7 +32,7 @@ export const HomePage = () => {
         >
             {!animated ? <WaterLoader /> : (
                 <div className='waterContainer'>
-                    <div className='absolute flex justify-center items-center w-full h-full text-7xl slogan'>{formatMessage(messages.slogan)}</div>
+                    <div className='absolute flex justify-center items-center w-full h-full text-6xl slogan text-center'>{formatMessage(messages.slogan)}</div>
                     {/* <img src="placeholders/arrow.png" className='absolute left-[5%] top-[10%]' />
                     <Cloud
                         classname='left-[20%] top-[35%]'
