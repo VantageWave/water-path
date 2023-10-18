@@ -32,7 +32,11 @@ export const HomePage = () => {
         >
             {!animated ? <WaterLoader /> : (
                 <div className='waterContainer'>
-                    <div className='absolute flex justify-center items-center w-full h-full text-6xl slogan text-center'>{formatMessage(messages.slogan)}</div>
+                    <div className='absolute flex justify-center items-center w-full h-full text-6xl slogan text-center'>
+                        {formatMessage(messages.slogan1)}
+                        &nbsp;<span className="text-[#46a1de]">{formatMessage(messages.slogan2)}</span>&nbsp;
+                        {formatMessage(messages.slogan3)}
+                    </div>
                     {/* <img src="placeholders/arrow.png" className='absolute left-[5%] top-[10%]' />
                     <Cloud
                         classname='left-[20%] top-[35%]'
@@ -118,8 +122,16 @@ const messages = defineMessages({
         id: 'src.pages.HomePage.cloud4Content',
         defaultMessage: 'Is our most important weapon against climate change. Learn more to grasp the magnitude of the issue.',
     },
-    slogan: {
-        id: 'src.pages.HomePage.slogan',
-        defaultMessage: 'EMPOWER CHANGE: VISUALIZE, UNDERSTAND, EDUCATE'
+    slogan1: {
+        id: 'src.pages.HomePage.slogan1',
+        defaultMessage: 'EMPOWER'
+    },
+    slogan2: {
+        id: 'src.pages.HomePage.slogan2',
+        defaultMessage: 'CHANGE:'
+    },
+    slogan3: {
+        id: 'src.pages.HomePage.slogan3',
+        defaultMessage: 'VISUALIZE, UNDERSTAND, EDUCATE'
     }
 });
