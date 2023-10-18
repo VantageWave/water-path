@@ -13,8 +13,8 @@ export const HomePage = () => {
     const [animated, setAnimated] = useState(false);
     const waves = [];
 
-    for (let i = 0; i < 480; i++) {
-        waves.push(<div className="line" key={`wave-${i}`} />)
+    for (let i = 0; i < 900; i++) {
+        waves.push(<div className="line" key={`wave-${i}`}  style= {{ animationDelay: `${(i + 1) * 0.002}s`, left: `${(i + 1) * 4}px` }}/>)
     }
 
     useEffect(() => {
@@ -32,7 +32,8 @@ export const HomePage = () => {
         >
             {!animated ? <WaterLoader /> : (
                 <div className='waterContainer'>
-                    <img src="placeholders/arrow.png" className='absolute left-[5%] top-[10%]' />
+                    <div className='absolute flex justify-center items-center w-full h-full text-7xl slogan'>{formatMessage(messages.slogan)}</div>
+                    {/* <img src="placeholders/arrow.png" className='absolute left-[5%] top-[10%]' />
                     <Cloud
                         classname='left-[20%] top-[35%]'
                         content={formatMessage(messages.cloud1Content)}
@@ -55,7 +56,7 @@ export const HomePage = () => {
                         titleStyles='mt-[-25px]'
                         content={formatMessage(messages.cloud4Content)}
                         title={formatMessage(messages.cloud4Title)}
-                    />
+                    /> */}
                     <LanguagePicker isTop />
                     <div id="container">
                         <Link to="/waterPath" className="learn-more">
@@ -117,4 +118,8 @@ const messages = defineMessages({
         id: 'src.pages.HomePage.cloud4Content',
         defaultMessage: 'Is our most important weapon against climate change. Learn more to grasp the magnitude of the issue.',
     },
+    slogan: {
+        id: 'src.pages.HomePage.slogan',
+        defaultMessage: 'EMPOWER CHANGE: VISUALIZE, UNDERSTAND, EDUCATE'
+    }
 });
