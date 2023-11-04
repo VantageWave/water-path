@@ -95,9 +95,12 @@ const DataTab = ({ level }: DataTabProps) => {
       </div>
 
       {summaryLoaded ? (
-        <span className="w-full text-[14px] indent-5 whitespace-break-spaces">
-          {summary}
-        </span>
+        <>
+          <span className="w-full text-[14px] indent-5 whitespace-break-spaces">
+            {summary}
+          </span>
+          <div className="h-7" />
+        </>
       ) : (
         <div className="flex flex-col	gap-[12px]">
           {Array.from(Array(12)).map((_, i) => (
